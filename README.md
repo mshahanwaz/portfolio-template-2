@@ -1,2 +1,7 @@
-# portfolio
-🐼 Personal Developer Portfolio built with Nextjs12
+# Personal Portfolio PRO ✨
+
+### `Built with:`
+
+- Nextjs
+- TailwindCSS
+- Radix { UI, Icons, Colors }
