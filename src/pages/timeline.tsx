@@ -14,7 +14,7 @@ export default function Timeline() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="inline-flex gap-4">
+        <div className="inline-flex gap-2 text-sm">
           <Link href="/">Back</Link>
         </div>
         <p className={sora.className}>Timeline</p>

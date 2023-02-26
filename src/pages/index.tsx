@@ -15,13 +15,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="w-10 h-10 bg-black text-white">
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
+        <div className="inline-flex gap-2 text-sm">
+          <Link href="/about">About</Link>/{' '}
+          <Link href="/projects">Projects</Link>/{' '}
           <Link href="/timeline">Timeline</Link>
         </div>
         <p className={sora.className}>Home</p>
-        <Button />
       </main>
     </>
   );
