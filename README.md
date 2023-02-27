@@ -4,4 +4,5 @@
 
 - Nextjs
 - TailwindCSS
-- Radix { UI, Icons, Colors }
+- Heroicons - generic icons
+- IconFinder - social media icons
