@@ -12,7 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <h1>Hello</h1>
+        <div className="m-4 p-4 bg-green-200">
+          <h1 className="text-9xl font-semibold flex flex-col">
+            <span>M.</span>
+            <span>Shahanwaz</span>
+          </h1>
+        </div>
       </MainLayout>
     </>
   );

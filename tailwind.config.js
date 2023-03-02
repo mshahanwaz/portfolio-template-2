@@ -11,13 +11,13 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        music: 'music 1s ease-in-out infinite',
+        equalizer: 'playing 1s ease-in-out infinite',
       },
       keyframes: {
-        music: {
+        playing: {
           '0%, 100%': { transform: 'scaleY(1)' },
-          '33%': { transform: 'scaleY(0.2)' },
-          '67%': { transform: 'scaleY(0.5)' },
+          '33%': { transform: 'scaleY(0.4)' },
+          '67%': { transform: 'scaleY(0.8)' },
         },
       },
     },
