@@ -2,6 +2,7 @@ import Logo from '@/assets/svgs/icons/Logo';
 import Link from 'next/link';
 import React from 'react';
 import {
+  CameraIcon,
   ClockIcon,
   HomeIcon,
   RocketLaunchIcon,
@@ -15,6 +16,7 @@ const navigationLinks = [
   { name: 'About', href: '/', icon: UserIcon },
   { name: 'Projects', href: '/', icon: RocketLaunchIcon },
   { name: 'Timeline', href: '/', icon: ClockIcon },
+  { name: 'Photography', href: '/', icon: CameraIcon },
 ];
 
 export default function Sidebar() {

@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import MiniSidebar from '@/components/MiniSidebar';
 import Sidebar from '@/components/Sidebar';
@@ -15,7 +16,8 @@ export default function MainLayout({ children }: any) {
       <Sidebar />
       <main className="flex-1 flex flex-col overflow-auto">
         <Header />
-        <div className="">{children}</div>
+        <div className="px-4">{children}</div>
+        <Footer />
       </main>
       <MiniSidebar />
     </div>
