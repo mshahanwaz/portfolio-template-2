@@ -21,21 +21,21 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="mt-20 text-center text-sm text-gray-600 group border-t border-gray-100">
+    <footer className="mt-20 text-center text-sm text-gray-600 border-t border-gray-100">
       <div className=" p-8 max-w-4xl w-full mx-auto flex flex-col gap-1 items-center">
         <p className="text-black text-base">
           M. Shahanwaz &copy; {new Date().getFullYear()}
         </p>
         <p className="inline-flex items-center">
-          Created with{' '}
+          Built with{' '}
           <img
-            className="grayscale group-hover:grayscale-0 w-5 h-5 object-contain mx-2"
+            className="w-5 h-5 object-contain mx-2"
             src={nextjs.src}
             alt="nextjs"
           />{' '}
-          NextJS &{' '}
+          NextJS and{' '}
           <img
-            className="grayscale group-hover:grayscale-0 w-5 h-5 object-contain mx-2"
+            className="w-5 h-5 object-contain mx-2"
             src={tailwind.src}
             alt="tailwind css"
           />{' '}

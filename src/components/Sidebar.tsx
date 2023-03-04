@@ -5,6 +5,7 @@ import {
   CameraIcon,
   ClockIcon,
   HomeIcon,
+  PencilIcon,
   RocketLaunchIcon,
   SunIcon,
   UserIcon,
@@ -16,6 +17,7 @@ const navigationLinks = [
   { name: 'About', href: '/', icon: UserIcon },
   { name: 'Projects', href: '/', icon: RocketLaunchIcon },
   { name: 'Timeline', href: '/', icon: ClockIcon },
+  { name: 'Blogs', href: '/', icon: PencilIcon },
   { name: 'Photography', href: '/', icon: CameraIcon },
 ];
 
