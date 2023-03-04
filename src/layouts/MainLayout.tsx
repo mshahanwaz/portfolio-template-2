@@ -13,10 +13,10 @@ export default function MainLayout({ children }: any) {
   return (
     <div className={cn('flex h-screen', sora.className)}>
       <Sidebar />
-      <div className="flex-1 flex flex-col">
+      <main className="flex-1 flex flex-col overflow-auto">
         <Header />
-        <main className="flex-1 overflow-auto">{children}</main>
-      </div>
+        <div className="">{children}</div>
+      </main>
       <MiniSidebar />
     </div>
   );

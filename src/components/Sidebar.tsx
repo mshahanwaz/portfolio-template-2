@@ -1,4 +1,4 @@
-import Logo from '@/assets/svgs/Logo';
+import Logo from '@/assets/svgs/icons/Logo';
 import Link from 'next/link';
 import React from 'react';
 import {
@@ -25,12 +25,12 @@ export default function Sidebar() {
   }
 
   return (
-    <aside className="flex flex-col w-60 bg-gray-100 border-r border-gray-200">
-      <div className="h-16 px-6 py-4 flex items-center gap-4 border-b border-gray-200">
+    <aside className="flex flex-col w-60 bg-gray-100/80 backdrop-blur-md border-r border-gray-200">
+      <div className="shrink-0 h-16 px-6 py-4 flex items-center gap-4 border-b border-gray-200">
         <Logo className="w-6 h-6" pathClassName="fill-black" />
         <h3 className="text-lg font-medium">M. Shahanwaz</h3>
       </div>
-      <nav className="flex-1 flex flex-col gap-2 p-2 backdrop-blur-md">
+      <nav className="flex-1 flex flex-col gap-2 p-2">
         {navigationLinks.map((item, i) => (
           <Link
             key={item.name}

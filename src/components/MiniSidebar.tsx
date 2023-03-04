@@ -1,9 +1,9 @@
 import cn from '@/core/utils/cn';
 import Equalizer from './Equalizer';
-import GitHubIcon from '@/assets/svgs/GitHubIcon';
-import LinkedInIcon from '@/assets/svgs/LinkedInIcon';
-import TwitterIcon from '@/assets/svgs/TwitterIcon';
-import InstagramIcon from '@/assets/svgs/InstagramIcon';
+import GitHubIcon from '@/assets/svgs/icons/GitHubIcon';
+import LinkedInIcon from '@/assets/svgs/icons/LinkedInIcon';
+import TwitterIcon from '@/assets/svgs/icons/TwitterIcon';
+import InstagramIcon from '@/assets/svgs/icons/InstagramIcon';
 
 const links = [
   {
@@ -30,13 +30,13 @@ const links = [
 
 export default function MiniSidebar() {
   return (
-    <aside className="w-16 p-2 flex flex-col gap-2 items-center bg-gray-100 border-l border-gray-200 backdrop-blur-md">
+    <aside className="w-16 p-2 flex flex-col gap-2 items-center bg-gray-100/80 border-l border-gray-200 backdrop-blur-md">
       {links.map((link, index) => (
         <a
           key={index}
           href={link.href}
           className={cn(
-            'w-full aspect-square bg-gray-200 grid place-items-center rounded-full hover:bg-gray-300 group',
+            'w-full aspect-square bg-gray-100 border border-gray-200 grid place-items-center rounded-full hover:bg-gray-200 group',
             index === 1 && 'mt-auto'
           )}
         >
