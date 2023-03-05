@@ -4,6 +4,7 @@ import React from 'react';
 import {
   CameraIcon,
   ClockIcon,
+  EnvelopeIcon,
   HomeIcon,
   PencilIcon,
   RocketLaunchIcon,
@@ -11,14 +12,20 @@ import {
   UserIcon,
 } from '@heroicons/react/20/solid';
 import cn from '@/core/utils/cn';
+import { useRouter } from 'next/router';
 
 const navigationLinks = [
   { name: 'Home', href: '/', icon: HomeIcon },
-  { name: 'About', href: '/', icon: UserIcon },
-  { name: 'Projects', href: '/', icon: RocketLaunchIcon },
-  { name: 'Timeline', href: '/', icon: ClockIcon },
-  { name: 'Blogs', href: '/', icon: PencilIcon },
-  { name: 'Photography', href: '/', icon: CameraIcon },
+  { name: 'About', href: '/about', icon: UserIcon },
+  { name: 'Projects', href: '/projects', icon: RocketLaunchIcon },
+  { name: 'Timeline', href: '/timeline', icon: ClockIcon },
+  { name: 'Blogs', href: '/blogs', icon: PencilIcon },
+  { name: 'Photography', href: '/photography', icon: CameraIcon },
+  {
+    name: 'Contact',
+    href: 'mailto:mohdshahanwaz55@gmail.com',
+    icon: EnvelopeIcon,
+  },
 ];
 
 export default function Sidebar() {
@@ -27,6 +34,17 @@ export default function Sidebar() {
   function isActive(i: number) {
     return i === activeLink;
   }
+
+  const router = useRouter();
+
+  React.useEffect(() => {
+    const index = navigationLinks.findIndex(
+      (item) => item.href === '/' + router.pathname.split('/')[1]
+    );
+    console.log(index);
+    setActiveLink(index);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <aside className="flex flex-col w-60 bg-gray-100/80 backdrop-blur-md border-r border-gray-200">

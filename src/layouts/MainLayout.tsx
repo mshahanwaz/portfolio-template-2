@@ -14,11 +14,11 @@ export default function MainLayout({ children }: any) {
   return (
     <div className={cn('flex h-screen', sora.className)}>
       <Sidebar />
-      <main className="bg-gray-50 flex-1 flex flex-col overflow-auto">
+      <div className="bg-gray-50 flex-1 flex flex-col overflow-auto">
         <Header />
-        <div className="">{children}</div>
+        <main className="flex-1">{children}</main>
         <Footer />
-      </main>
+      </div>
       <MiniSidebar />
     </div>
   );
