@@ -49,9 +49,9 @@ export default function Projects() {
                 key={project.id}
                 className="flex gap-4 bg-gray-100 p-4 rounded-md"
               >
-                <div className="max-w-[200px]">
+                <div className="w-80">
                   <img
-                    className="w-full aspect-square object-cover rounded-lg"
+                    className="h-full inline object-center object-cover rounded-lg"
                     src={project.image}
                     alt="project"
                   />
