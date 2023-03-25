@@ -43,7 +43,6 @@ export default function Projects() {
             <span>Projects</span>
           </h1>
           <div className="grid grid-cols-1 gap-5">
-            {/* write jsx below for each project in portfolio */}
             {projects.map((project) => (
               <div
                 key={project.id}
