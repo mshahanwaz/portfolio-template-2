@@ -1,79 +1,95 @@
-import Logo from '@/assets/svgs/icons/Logo';
+/* eslint-disable react-hooks/exhaustive-deps */
 import Link from 'next/link';
 import React from 'react';
-import {
-  CameraIcon,
-  ClockIcon,
-  EnvelopeIcon,
-  HomeIcon,
-  PencilIcon,
-  RocketLaunchIcon,
-  SunIcon,
-  UserIcon,
-} from '@heroicons/react/20/solid';
 import cn from '@/core/utils/cn';
 import { useRouter } from 'next/router';
+import {
+  CameraIcon,
+  ChevronLeftIcon,
+  CPUIcon,
+  HomeIcon,
+  LogIcon,
+  MailIcon,
+  PenIcon,
+  SunIcon,
+  UserIcon,
+} from '@/assets/svgs/icons';
+import ChevronRightIcon from '@/assets/svgs/icons/ChevronRightIcon';
 
-const navigationLinks = [
+const navLinks = [
   { name: 'Home', href: '/', icon: HomeIcon },
   { name: 'About', href: '/about', icon: UserIcon },
-  { name: 'Projects', href: '/projects', icon: RocketLaunchIcon },
-  { name: 'Timeline', href: '/timeline', icon: ClockIcon },
-  { name: 'Blogs', href: '/blogs', icon: PencilIcon },
+  { name: 'Projects', href: '/projects', icon: CPUIcon },
+  { name: 'Timeline', href: '/timeline', icon: LogIcon },
+  { name: 'Blogs', href: '/blogs', icon: PenIcon },
   { name: 'Photography', href: '/photography', icon: CameraIcon },
   {
     name: 'Contact',
     href: 'mailto:mohdshahanwaz55@gmail.com',
-    icon: EnvelopeIcon,
+    icon: MailIcon,
   },
 ];
 
 export default function Sidebar() {
-  const [activeLink, setActiveLink] = React.useState(0);
+  const [shrinked, setShrinked] = React.useState(false);
+  const [activeNavLinkIndex, setActiveNavLinkIndex] = React.useState(0);
 
-  function isActive(i: number) {
-    return i === activeLink;
-  }
-
-  const router = useRouter();
+  const { pathname } = useRouter();
 
   React.useEffect(() => {
-    const index = navigationLinks.findIndex(
-      (item) => item.href === '/' + router.pathname.split('/')[1]
+    const currentNavLinkIndex = navLinks.findIndex(
+      (navLink) => navLink.href === '/' + pathname.split('/')[1]
     );
-    console.log(index);
-    setActiveLink(index);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setActiveNavLinkIndex(currentNavLinkIndex);
   }, []);
 
+  const handleShrinkSidebar = () => {
+    setShrinked(!shrinked);
+  };
+
   return (
-    <aside className="flex flex-col w-60 bg-gray-100/80 backdrop-blur-md border-r border-gray-200">
-      <div className="shrink-0 h-16 px-6 py-4 flex items-center gap-4 border-b border-gray-200">
-        <Logo className="w-6 h-6" pathClassName="fill-black" />
-        <h3 className="text-lg font-medium">M. Shahanwaz</h3>
-      </div>
-      <nav className="flex-1 flex flex-col gap-2 p-2">
-        {navigationLinks.map((item, i) => (
+    <aside
+      className={cn(
+        'flex flex-col bg-gray-100/80 backdrop-blur-md border-r border-gray-200',
+        shrinked ? 'w-fit' : 'w-60'
+      )}
+    >
+      <nav className="flex-1 flex flex-col gap-2 p-3">
+        {navLinks.map((navLink, navLinkIndex) => (
           <Link
-            key={item.name}
-            href={item.href}
+            key={navLink.name}
+            href={navLink.href}
             className={cn(
-              'flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-white hover:text-black hover:shadow',
-              isActive(i) ? 'bg-white text-black shadow' : 'text-gray-600'
+              'flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white hover:text-black hover:shadow',
+              navLinkIndex === activeNavLinkIndex
+                ? 'bg-white text-black font-medium shadow'
+                : 'text-gray-600'
             )}
-            onClick={() => setActiveLink(navigationLinks.indexOf(item))}
+            onClick={() => setActiveNavLinkIndex(navLinks.indexOf(navLink))}
           >
-            <span className="w-6 h-6 flex">
-              <item.icon className="w-5 h-5 m-auto" />
+            <span className="h-6 flex items-center">
+              <navLink.icon className="w-4 h-4" />
             </span>
-            <span>{item.name}</span>
+            {!shrinked && <span>{navLink.name}</span>}
           </Link>
         ))}
-        <button className="mt-auto flex items-center gap-2 px-3 py-2 rounded-lg text-gray-600 hover:bg-white hover:text-black hover:shadow">
-          <span>
-            <SunIcon className="w-5 h-5" />
+        <button className="flex items-center px-3 py-2 gap-3 rounded-lg text-gray-600 hover:bg-white hover:text-black hover:shadow">
+          <span className="h-6 flex items-center">
+            <SunIcon className="w-4 h-4" />
           </span>
-          <span>Light Mode</span>
+          {!shrinked && <span>Light theme</span>}
+        </button>
+        <button
+          onClick={handleShrinkSidebar}
+          className="mt-auto flex items-center px-3 py-2 gap-3 text-gray-600 hover:text-black"
+        >
+          <span className="h-6 flex items-center">
+            {shrinked ? (
+              <ChevronRightIcon className="w-4 h-4" />
+            ) : (
+              <ChevronLeftIcon className="w-4 h-4" />
+            )}
+          </span>
         </button>
       </nav>
     </aside>
