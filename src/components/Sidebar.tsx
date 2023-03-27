@@ -15,7 +15,6 @@ import {
   UserIcon,
 } from '@/assets/svgs/icons';
 import ChevronRightIcon from '@/assets/svgs/icons/ChevronRightIcon';
-import useLocalStorage from '@/core/hooks/useLocalStorage';
 
 const navLinks = [
   { name: 'Home', href: '/', icon: HomeIcon },
@@ -31,14 +30,9 @@ const navLinks = [
   },
 ];
 
-export default function Sidebar(props: any) {
-  const [shrinkedLocal, setShrinkedLocal] = useLocalStorage<boolean>(
-    'shrinked',
-    false
-  );
-
-  const [activeNavLinkIndex, setActiveNavLinkIndex] = React.useState(0);
+export default function Sidebar() {
   const [shrinked, setShrinked] = React.useState(false);
+  const [activeNavLinkIndex, setActiveNavLinkIndex] = React.useState(0);
 
   const { pathname } = useRouter();
 
@@ -47,15 +41,11 @@ export default function Sidebar(props: any) {
       (navLink) => navLink.href === '/' + pathname.split('/')[1]
     );
     setActiveNavLinkIndex(currentNavLinkIndex);
-    setShrinked(shrinkedLocal);
   }, []);
 
   const handleShrinkSidebar = () => {
     setShrinked(!shrinked);
-    setShrinkedLocal(!shrinkedLocal);
   };
-
-  console.log('props', props);
 
   return (
     <aside
@@ -104,12 +94,4 @@ export default function Sidebar(props: any) {
       </nav>
     </aside>
   );
-}
-
-export function getStaticProps() {
-  return {
-    props: {
-      localShrinked: false,
-    },
-  };
 }
