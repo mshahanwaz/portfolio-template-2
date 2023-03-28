@@ -1,4 +1,4 @@
-export default function PenIcon(props: { className: string }) {
+export default function PenIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}

@@ -1,4 +1,4 @@
-export default function LogIcon(props: { className: string }) {
+export default function LogIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}

@@ -21,7 +21,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="mt-20 text-center text-sm text-gray-600 border-t border-gray-100">
+    <footer className="mt-20 text-center text-sm text-gray-600">
       <div className=" p-8 max-w-4xl w-full mx-auto flex flex-col gap-1 items-center">
         <p className="text-black text-base">
           M. Shahanwaz &copy; {new Date().getFullYear()}

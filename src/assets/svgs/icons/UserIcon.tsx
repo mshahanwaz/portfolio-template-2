@@ -1,4 +1,4 @@
-export default function UserIcon(props: { className: string }) {
+export default function UserIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}

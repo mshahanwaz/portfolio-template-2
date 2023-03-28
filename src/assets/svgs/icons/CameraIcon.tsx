@@ -1,4 +1,4 @@
-export default function CameraIcon(props: { className: string }) {
+export default function CameraIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}
