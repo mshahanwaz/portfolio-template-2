@@ -1,4 +1,4 @@
-export default function CrossIcon(props: { className: string }) {
+export default function CrossIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}

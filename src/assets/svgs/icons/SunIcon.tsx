@@ -1,4 +1,4 @@
-export default function SunIcon(props: { className: string }) {
+export default function SunIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}

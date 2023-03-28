@@ -8,10 +8,10 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function MainLayout({ children }: any) {
   return (
-    <div className={cn('flex h-screen', inter.className)}>
+    <div className={cn('bg-gray-50 flex items-start', inter.className)}>
       <Sidebar />
-      <div className="bg-gray-50 flex-1 flex flex-col overflow-auto">
-        <main className="flex-1">{children}</main>
+      <div className="w-full divide-y">
+        <main className="mx-auto max-w-4xl w-full">{children}</main>
         <Footer />
       </div>
     </div>

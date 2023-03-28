@@ -1,4 +1,4 @@
-export default function ChevronLeftIcon(props: { className: string }) {
+export default function ChevronLeftIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}

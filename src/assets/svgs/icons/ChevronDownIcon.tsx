@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function ChevronRightIcon(props: { className?: string }) {
+export default function ChevronDownIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}
@@ -11,7 +11,7 @@ export default function ChevronRightIcon(props: { className?: string }) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <polyline points="9 18 15 12 9 6"></polyline>
+      <polyline points="6 9 12 15 18 9"></polyline>
     </svg>
   );
 }

@@ -36,70 +36,68 @@ const projects = [
 
 export default function Projects() {
   return (
-    <MainLayout>
-      <div className="">
-        <div className="max-w-4xl w-full mx-auto p-4 flex flex-col gap-10">
-          <h1 className="text-9xl font-semibold">
-            <span>Projects</span>
-          </h1>
-          <div className="grid grid-cols-1 gap-5">
-            {projects.map((project) => (
-              <div
-                key={project.id}
-                className="flex gap-4 bg-gray-100 p-4 rounded-md"
-              >
-                <div className="w-80">
-                  <img
-                    className="h-full inline object-center object-cover rounded-lg"
-                    src={project.image}
-                    alt="project"
-                  />
+    <div className="">
+      <div className="max-w-4xl w-full mx-auto p-4 flex flex-col gap-10">
+        <h1 className="text-9xl font-semibold">
+          <span>Projects</span>
+        </h1>
+        <div className="grid grid-cols-1 gap-5">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="flex gap-4 bg-gray-100 p-4 rounded-md"
+            >
+              <div className="w-80">
+                <img
+                  className="h-full inline object-center object-cover rounded-lg"
+                  src={project.image}
+                  alt="project"
+                />
+              </div>
+              <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-2xl font-semibold">{project.title}</h2>
+                  <p className="text-gray-500">{project.description}</p>
                 </div>
-                <div className="flex flex-col gap-5">
-                  <div className="flex flex-col gap-2">
-                    <h2 className="text-2xl font-semibold">{project.title}</h2>
-                    <p className="text-gray-500">{project.description}</p>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <h3 className="text-xl font-semibold">Techs</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {project.techs.map((tech) => (
-                        <span
-                          key={tech}
-                          className="bg-gray-200 px-2 py-1 rounded-md"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <h3 className="text-xl font-semibold">Links</h3>
-                    <div className="flex flex-wrap gap-2">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noreferrer"
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-xl font-semibold">Techs</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {project.techs.map((tech) => (
+                      <span
+                        key={tech}
                         className="bg-gray-200 px-2 py-1 rounded-md"
                       >
-                        Live
-                      </a>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="bg-gray-200 px-2 py-1 rounded-md"
-                      >
-                        Github
-                      </a>
-                    </div>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <h3 className="text-xl font-semibold">Links</h3>
+                  <div className="flex flex-wrap gap-2">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-gray-200 px-2 py-1 rounded-md"
+                    >
+                      Live
+                    </a>
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="bg-gray-200 px-2 py-1 rounded-md"
+                    >
+                      Github
+                    </a>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
-    </MainLayout>
+    </div>
   );
 }

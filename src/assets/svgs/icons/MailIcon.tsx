@@ -1,4 +1,4 @@
-export default function MailIcon(props: { className: string }) {
+export default function MailIcon(props: { className?: string }) {
   return (
     <svg
       className={props.className}
