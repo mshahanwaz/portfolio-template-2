@@ -77,19 +77,20 @@ const logos = [
 
 export default function Banner() {
   return (
-    <div className="relative h-[50px]  overflow-hidden group">
+    <div className="relative h-[60px] overflow-hidden group">
       <div className="h-inherit animate-banner absolute top-0 left-0 whitespace-nowrap group-hover:pause">
         {[...logos, ...logos].map((logo, index) => (
           <div
             key={index}
-            className="h-inherit min-w-[200px] aspect-square inline-flex items-center justify-center gap-4 mx-10 text-gray-600 hover:text-black"
+            className="h-inherit min-w-[300px] aspect-square inline-flex items-center justify-center gap-4 text-gray-600 hover:text-black"
+            title={logo.alt}
           >
             <img
               className="h-inherit max-w-none inline"
               src={logo.src}
               alt={logo.alt}
             />
-            <span className="">{logo.alt}</span>
+            <span className="text-lg font-medium">{logo.alt}</span>
           </div>
         ))}
       </div>
