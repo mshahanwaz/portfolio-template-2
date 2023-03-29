@@ -12,4 +12,15 @@
   .h-inherit {
     height: inherit;
   }
+  .container {
+    @apply max-w-4xl w-full mx-auto;
+  }
+  .space-border {
+    @apply rounded-[2rem] p-2 border border-gray-200;
+  }
+}
+
+h1,
+h2 {
+  @apply font-bold tracking-tight;
 }
