@@ -1,10 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
-import { SunIcon } from '@/assets/svgs/icons';
 import Banner from '@/components/Banner';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Button from '@/components/Button';
 import DownloadIcon from '@/assets/svgs/icons/DownloadIcon';
+import Link from 'next/link';
+import React from 'react';
 
 const GALLERY = [
   {
@@ -75,12 +76,18 @@ export default function Home() {
                 quidem, voluptate. Quisquam, quod quae quidem, voluptate.
                 Quisquam, quod quae quidem, voluptate.
               </p>
-              <Button className="flex items-center gap-4">
-                <span>
-                  <DownloadIcon className="w-4 h-4" />
-                </span>
-                <span>Resume</span>
-              </Button>
+              <Link
+                href="https://drive.google.com/uc?id=1b9qWEM1gYSLXMobeuvu9Jnq6YhRDwX7P&export=download"
+                className="inline-block"
+                id="resume"
+              >
+                <Button className="flex items-center gap-4">
+                  <span>
+                    <DownloadIcon className="w-4 h-4" />
+                  </span>
+                  <span>Resume</span>
+                </Button>
+              </Link>
             </div>
             <div className="w-1/3">
               <img
@@ -93,7 +100,7 @@ export default function Home() {
         </div>
         <div className="py-16 space-y-16">
           <div className="px-4 container space-y-3">
-            <h2 className="text-3xl">Skills</h2>
+            <h3 className="text-3xl text-">Skills</h3>
             <p className="text-gray-700 text-lg">
               In the course of my professional journey, I have utilized various
               tools and technologies.
@@ -105,7 +112,7 @@ export default function Home() {
         </div>
         <div className="container px-4 py-16 space-y-16">
           <div className="px-4 container space-y-3">
-            <h2 className="text-3xl">Little Gallery</h2>
+            <h3 className="text-3xl text-">Little Gallery</h3>
             <p className="text-gray-700 text-lg">
               In the course of my professional journey, I have utilized various
               tools and technologies.
