@@ -1,12 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import MainLayout from '@/layouts/MainLayout';
+import { motion } from 'framer-motion';
 
 export default function photography() {
   return (
-    <div className="">
-      <div className="max-w-4xl w-full mx-auto p-4 flex flex-col gap-10">
-        <h1 className="text-9xl font-semibold">
-          <span>Photography</span>
+    <motion.div
+      className="space-y-20"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
+      }}
+    >
+      <div className="container px-4 py-16 flex flex-col gap-12">
+        <h1 className="text-9xl">
+          <div>Photography</div>
         </h1>
         <div className="grid grid-cols-2 gap-5">
           {Array(10)
@@ -21,6 +29,6 @@ export default function photography() {
             ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

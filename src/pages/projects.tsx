@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import MainLayout from '@/layouts/MainLayout';
+import { motion } from 'framer-motion';
 
 const projects = [
   {
@@ -36,13 +36,21 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="">
-      <div className="max-w-4xl w-full mx-auto p-4 flex flex-col gap-10">
-        <h1 className="text-9xl font-semibold">
+    <motion.div
+      className="space-y-20"
+      initial={{ opacity: 0, y: 10 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
+      }}
+    >
+      <div className="container px-4 py-16 flex flex-col gap-12">
+        <h1 className="text-9xl">
           <span>Projects</span>
         </h1>
         <div className="grid grid-cols-1 gap-5">
-          {projects.map((project) => (
+          {projects.map((project, projectIndex) => (
             <div
               key={project.id}
               className="flex gap-4 bg-gray-100 p-4 rounded-md"
@@ -56,8 +64,10 @@ export default function Projects() {
               </div>
               <div className="flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                  <h2 className="text-2xl font-semibold">{project.title}</h2>
-                  <p className="text-gray-500">{project.description}</p>
+                  <h2 className="text-2xl font-semibold">
+                    {projectIndex}. {project.title}
+                  </h2>
+                  <p className="text-gray-700">{project.description}</p>
                 </div>
                 <div className="flex flex-col gap-2">
                   <h3 className="text-xl font-semibold">Techs</h3>
@@ -98,6 +108,6 @@ export default function Projects() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

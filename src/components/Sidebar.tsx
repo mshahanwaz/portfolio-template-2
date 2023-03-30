@@ -93,7 +93,7 @@ export default function Sidebar() {
   ];
 
   const SelectTheme = () => (
-    <div className="group relative flex items-center px-3 py-2 rounded-lg text-gray-600 hover:bg-white hover:text-black hover:shadow">
+    <div className="group relative flex items-center px-3 py-2 rounded-lg hover:bg-white hover:text-black hover:shadow">
       <div className="w-full flex items-center gap-3">
         <span className="h-6 flex items-center">
           <SunIcon className="w-4 h-4" />
@@ -135,7 +135,7 @@ export default function Sidebar() {
         x: 0,
         transition: { duration: 0.2, ease: 'easeOut' },
       }}
-      className="sticky top-0 h-screen flex flex-col bg-gray-100 backdrop-blur-md border-r border-gray-200"
+      className="sticky top-0 h-screen flex flex-col text-gray-600 bg-gray-100 backdrop-blur-md border-r border-gray-200"
     >
       <motion.nav
         animate={{
@@ -153,9 +153,7 @@ export default function Sidebar() {
               }}
               className={cn(
                 'flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white hover:text-black hover:shadow',
-                link.active
-                  ? 'bg-white text-black font-medium shadow'
-                  : 'text-gray-600'
+                link.active && 'bg-white text-black font-medium shadow'
               )}
             >
               <span className="h-6 flex items-center">{link.icon}</span>
@@ -181,7 +179,7 @@ export default function Sidebar() {
                 width: isOpen ? 240 : 40,
                 transition: { duration: 0.1, ease: 'easeOut' },
               }}
-              className="group flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-white hover:text-black hover:shadow"
+              className="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white hover:text-black hover:shadow"
             >
               <span className="h-6 flex items-center">{link.icon}</span>
               <motion.div
@@ -209,7 +207,7 @@ export default function Sidebar() {
         <SelectTheme />
         <button
           onClick={() => setIsOpen((isOpen) => !isOpen)}
-          className="mt-auto flex items-center px-3 py-2 gap-3 text-gray-600 hover:text-black"
+          className="mt-auto flex items-center px-3 py-2 gap-3 hover:text-black"
         >
           <span className={cn('h-6 flex items-center', isOpen && 'rotate-180')}>
             <ChevronRightIcon className="w-4 h-4" />

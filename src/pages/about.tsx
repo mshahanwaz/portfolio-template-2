@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
-import MainLayout from '@/layouts/MainLayout';
 import { SunIcon } from '@/assets/svgs/icons';
+import { motion } from 'framer-motion';
 
 export default function About() {
   return (
@@ -12,9 +12,17 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      <div className="">
-        <div className="max-w-4xl w-full mx-auto p-4 flex flex-col gap-10">
-          <h1 className="text-9xl font-semibold">
+      <motion.div
+        className="space-y-20"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
+        }}
+      >
+        <div className="container px-4 py-16 flex flex-col gap-12">
+          <h1 className="text-9xl">
             <span>About</span>
           </h1>
           <div className="flex items-center gap-5">
@@ -29,7 +37,7 @@ export default function About() {
                 />
               ))}
           </div>
-          <div className="text-gray-600 flex flex-col gap-5">
+          <div className="text-gray-700 flex flex-col gap-5">
             <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam
@@ -79,7 +87,7 @@ export default function About() {
           <div className="flex flex-col gap-5">
             <div className="flex items-center gap-4">
               <span className="p-2 border border-gray-200 bg-gray-100 rounded-lg shadow">
-                <SunIcon className="w-5 h-5 text-gray-600" />
+                <SunIcon className="w-5 h-5 text-gray-700" />
               </span>
               <span className="font-bold text-xl">Work Experience</span>
             </div>
@@ -102,7 +110,7 @@ export default function About() {
                           <h3 className="font-semibold text-lg">
                             Bosscoder Academy
                           </h3>
-                          <p className="text-gray-600">Full Stack Developer</p>
+                          <p className="text-gray-700">Full Stack Developer</p>
                         </div>
                       </div>
                       <ul className="list-disc pl-6 py-4 flex flex-col gap-2">
@@ -125,7 +133,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }
