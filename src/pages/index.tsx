@@ -12,32 +12,32 @@ const GALLERY = [
     id: 1,
     src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     className:
-      'overflow-hidden rounded-tl-3xl rounded-lg row-start-1 row-end-5 col-start-1 col-end-6 bg-gray-300',
+      'overflow-hidden rounded-tl-3xl rounded-lg row-start-1 row-end-5 col-start-1 col-end-6',
   },
   {
     id: 2,
     src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     className:
-      'overflow-hidden rounded-tr-3xl rounded-lg row-start-1 row-end-3 col-start-6 col-end-8 bg-gray-300',
+      'overflow-hidden rounded-tr-3xl rounded-lg row-start-1 row-end-3 col-start-6 col-end-8',
   },
   {
     id: 3,
     src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     className:
-      'overflow-hidden rounded-lg row-start-3 row-end-5 col-start-6 col-end-8 bg-gray-300',
+      'overflow-hidden rounded-lg row-start-3 row-end-5 col-start-6 col-end-8',
   },
   {
     id: 4,
 
     src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     className:
-      'overflow-hidden rounded-bl-3xl rounded-lg row-start-5 row-end-7 col-start-1 col-end-4 bg-gray-300',
+      'overflow-hidden rounded-bl-3xl rounded-lg row-start-5 row-end-7 col-start-1 col-end-4',
   },
   {
     id: 5,
     src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     className:
-      'overflow-hidden rounded-br-3xl rounded-lg row-start-5 row-end-7 col-start-4 col-end-8 bg-gray-300',
+      'overflow-hidden rounded-br-3xl rounded-lg row-start-5 row-end-7 col-start-4 col-end-8',
   },
 ];
 
@@ -59,7 +59,7 @@ export default function Home() {
           transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
         }}
       >
-        <div className="container px-4 py-16 flex flex-col gap-12">
+        <div className="wrapper px-4 py-16 flex flex-col gap-12">
           <h1 className="text-9xl">
             <div>M.</div>
             <div>Shahanwaz</div>
@@ -99,7 +99,7 @@ export default function Home() {
           </div>
         </div>
         <div className="py-16 space-y-16">
-          <div className="px-4 container space-y-3">
+          <div className="px-4 wrapper space-y-3">
             <h3 className="text-3xl text-">Skills</h3>
             <p className="text-gray-700 text-lg">
               In the course of my professional journey, I have utilized various
@@ -110,8 +110,8 @@ export default function Home() {
             <Banner />
           </div>
         </div>
-        <div className="container px-4 py-16 space-y-16">
-          <div className="px-4 container space-y-3">
+        <div className="wrapper px-4 py-16 space-y-16">
+          <div className="px-4 wrapper space-y-3">
             <h3 className="text-3xl text-">Little Gallery</h3>
             <p className="text-gray-700 text-lg">
               In the course of my professional journey, I have utilized various
@@ -122,7 +122,7 @@ export default function Home() {
             {GALLERY.map((item) => (
               <div key={item.id} className={item.className}>
                 <img
-                  className="w-full h-full object-cover hover:scale-125 ease-[cubic-bezier(0.5,0.25,0,1)] transition-transform duration-1000"
+                  className="w-full h-full object-cover hover-scale"
                   src={item.src}
                   alt=""
                 />

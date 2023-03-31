@@ -45,7 +45,7 @@ export default function Projects() {
         transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
       }}
     >
-      <div className="container px-4 py-16 flex flex-col gap-12">
+      <div className="wrapper px-4 py-16 flex flex-col gap-12">
         <h1 className="text-9xl">
           <span>Projects</span>
         </h1>
