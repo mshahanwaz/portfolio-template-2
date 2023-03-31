@@ -12,11 +12,14 @@
   .h-inherit {
     height: inherit;
   }
-  .container {
+  .wrapper {
     @apply max-w-4xl w-full mx-auto;
   }
   .space-border {
     @apply rounded-[2rem] p-2 border border-gray-200;
+  }
+  .hover-scale {
+    @apply hover:scale-125 ease-[cubic-bezier(0.5,0.25,0,1)] transition-transform duration-1000;
   }
 }
 
