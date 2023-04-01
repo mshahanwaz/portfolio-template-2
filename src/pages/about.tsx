@@ -17,32 +17,30 @@ export default function About() {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
+          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' }
         }}
       >
-        <div className="wrapper px-4 py-16 flex flex-col gap-12">
+        <div className="wrapper flex flex-col gap-12 px-4 py-16">
           <h1 className="text-9xl">
             <span>About</span>
           </h1>
           <div className="space-border flex items-center gap-2">
             <span className="overflow-hidden rounded-l-3xl rounded-r-lg">
-              <motion.img
-                whileHover={{ scale: 1.25 }}
-                className="object-cover"
+              <img
+                className="hover-scale object-cover"
                 src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
                 alt="my photo"
               />
             </span>
             <span className="overflow-hidden rounded-r-3xl rounded-l-lg">
-              <motion.img
-                whileHover={{ scale: 1.25 }}
-                className="object-cover"
+              <img
+                className="hover-scale object-cover"
                 src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
                 alt="my photo"
               />
             </span>
           </div>
-          <div className="text-gray-700 flex flex-col gap-5">
+          <div className="flex flex-col gap-5 text-gray-700">
             <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam
