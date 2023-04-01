@@ -1,11 +1,8 @@
-const options = {
-  arrowParens: 'avoid',
-  singleQuote: true, 
-  bracketSpacing: true,
+module.exports = {
+  singleQuote: true,
   endOfLine: 'lf',
   semi: true,
   tabWidth: 2,
-  trailingComma: 'none'
-}
-
-module.exports = options
+  trailingComma: 'none',
+  plugins: [require('prettier-plugin-tailwindcss')]
+};
