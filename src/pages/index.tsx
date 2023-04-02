@@ -5,39 +5,22 @@ import { motion } from 'framer-motion';
 import Button from '@/components/Button';
 import DownloadIcon from '@/assets/svgs/icons/DownloadIcon';
 import Link from 'next/link';
+import cn from '@/core/utils/cn';
 
 const GALLERY = [
-  {
-    id: 1,
-    src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    className:
-      'overflow-hidden rounded-tl-3xl rounded-lg row-start-1 row-end-5 col-start-1 col-end-6'
-  },
-  {
-    id: 2,
-    src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    className:
-      'overflow-hidden rounded-tr-3xl rounded-lg row-start-1 row-end-3 col-start-6 col-end-8'
-  },
-  {
-    id: 3,
-    src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    className:
-      'overflow-hidden rounded-lg row-start-3 row-end-5 col-start-6 col-end-8'
-  },
-  {
-    id: 4,
+  'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+];
 
-    src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    className:
-      'overflow-hidden rounded-bl-3xl rounded-lg row-start-5 row-end-7 col-start-1 col-end-4'
-  },
-  {
-    id: 5,
-    src: 'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    className:
-      'overflow-hidden rounded-br-3xl rounded-lg row-start-5 row-end-7 col-start-4 col-end-8'
-  }
+const GRID_SPANS = [
+  'row-start-1 row-end-5 col-start-1 col-end-6',
+  'row-start-1 row-end-3 col-start-6 col-end-8',
+  'row-start-3 row-end-5 col-start-6 col-end-8',
+  'row-start-5 row-end-7 col-start-1 col-end-4',
+  'row-start-5 row-end-7 col-start-4 col-end-8'
 ];
 
 export default function Home() {
@@ -117,16 +100,24 @@ export default function Home() {
               tools and technologies.
             </p>
           </div>
-          <div className="space-border grid aspect-[7/6] h-full grid-cols-7 grid-rows-6 gap-2 overflow-hidden">
-            {GALLERY.map((item) => (
-              <div key={item.id} className={item.className}>
-                <img
-                  className="hover-scale h-full w-full object-cover"
-                  src={item.src}
-                  alt=""
-                />
-              </div>
-            ))}
+          <div className="space-border h-full overflow-hidden">
+            <div className="grid aspect-[7/6] grid-cols-7 grid-rows-6 gap-2 overflow-hidden rounded-3xl">
+              {GALLERY.map((picture, pictureIndex) => (
+                <div
+                  key={pictureIndex}
+                  className={cn(
+                    GRID_SPANS[pictureIndex],
+                    'overflow-hidden rounded-lg'
+                  )}
+                >
+                  <img
+                    className="hover-scale h-full w-full object-cover"
+                    src={picture}
+                    alt=""
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </motion.div>

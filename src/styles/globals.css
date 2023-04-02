@@ -13,18 +13,18 @@
     height: inherit;
   }
   .wrapper {
-    @apply max-w-4xl w-full mx-auto;
+    @apply mx-auto w-full max-w-4xl;
   }
   .space-border {
-    @apply rounded-[2rem] p-2 border border-gray-200;
+    @apply rounded-[2rem] border border-gray-200 p-2;
   }
   .hover-scale {
-    @apply hover:scale-125 ease-[cubic-bezier(0.5,0.25,0,1)] transition-transform duration-1000;
+    @apply transition-transform duration-1000 ease-[cubic-bezier(0.5,0.25,0,1)] hover:scale-125;
   }
 }
 
 h1,
 h2,
 h3 {
-  @apply font-bold tracking-tight;
+  @apply font-bold tracking-tight text-gray-900;
 }

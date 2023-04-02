@@ -22,20 +22,20 @@ export default function Footer() {
 
   return (
     <footer className="mt-20 text-center text-sm text-gray-600">
-      <div className=" p-8 max-w-4xl w-full mx-auto flex flex-col gap-1 items-center">
-        <p className="text-black text-base">
+      <div className=" mx-auto flex w-full max-w-4xl flex-col items-center gap-1 p-8">
+        <p className="text-base font-medium text-gray-900">
           M. Shahanwaz &copy; {new Date().getFullYear()}
         </p>
         <p className="inline-flex items-center">
           Built with{' '}
           <img
-            className="w-5 h-5 object-contain mx-2"
+            className="mx-2 h-5 w-5 object-contain"
             src={nextjs.src}
             alt="nextjs"
           />{' '}
           NextJS and{' '}
           <img
-            className="w-5 h-5 object-contain mx-2"
+            className="mx-2 h-5 w-5 object-contain"
             src={tailwind.src}
             alt="tailwind css"
           />{' '}

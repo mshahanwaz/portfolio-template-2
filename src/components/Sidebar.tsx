@@ -12,7 +12,7 @@ import {
   MailIcon,
   PenIcon,
   SunIcon,
-  UserIcon,
+  UserIcon
 } from '@/assets/svgs/icons';
 import ChevronRightIcon from '@/assets/svgs/icons/ChevronRightIcon';
 import ChevronDownIcon from '@/assets/svgs/icons/ChevronDownIcon';
@@ -21,6 +21,7 @@ import GitHubIcon from '@/assets/svgs/icons/GitHubIcon';
 import LinkedInIcon from '@/assets/svgs/icons/LinkedInIcon';
 import ExternalIcon from '@/assets/svgs/icons/ExternalIcon';
 import InstagramIcon from '@/assets/svgs/icons/InstagramIcon';
+import ArrowUpRightIcon from '@/assets/svgs/icons/ArrowUpRightIcon';
 
 export default function Sidebar() {
   const { pathname } = useRouter();
@@ -30,78 +31,78 @@ export default function Sidebar() {
     {
       name: 'Home',
       href: '/',
-      icon: <HomeIcon className="w-4 h-4" />,
-      active: pathname === '/',
+      icon: <HomeIcon className="h-4 w-4" />,
+      active: pathname === '/'
     },
     {
       name: 'About',
       href: '/about',
-      icon: <UserIcon className="w-4 h-4" />,
-      active: pathname.includes('/about'),
+      icon: <UserIcon className="h-4 w-4" />,
+      active: pathname.includes('/about')
     },
     {
       name: 'Projects',
       href: '/projects',
-      icon: <CPUIcon className="w-4 h-4" />,
-      active: pathname.includes('/projects'),
+      icon: <CPUIcon className="h-4 w-4" />,
+      active: pathname.includes('/projects')
     },
     {
       name: 'Timeline',
       href: '/timeline',
-      icon: <LogIcon className="w-4 h-4" />,
-      active: pathname.includes('/timeline'),
+      icon: <LogIcon className="h-4 w-4" />,
+      active: pathname.includes('/timeline')
     },
     {
       name: 'Blogs',
       href: '/blogs',
-      icon: <PenIcon className="w-4 h-4" />,
-      active: pathname.includes('/blogs'),
+      icon: <PenIcon className="h-4 w-4" />,
+      active: pathname.includes('/blogs')
     },
     {
       name: 'Photography',
       href: '/photography',
-      icon: <CameraIcon className="w-4 h-4" />,
-      active: pathname.includes('/photography'),
-    },
+      icon: <CameraIcon className="h-4 w-4" />,
+      active: pathname.includes('/photography')
+    }
   ];
 
   const SOCIAL_LINKS = [
     {
       name: 'GitHub',
       href: 'https://github.com/mshahanwaz',
-      icon: <GitHubIcon className="w-4 h-4" />,
-      external: true,
+      icon: <GitHubIcon className="h-4 w-4" />,
+      external: true
     },
     {
       name: 'LinkedIn',
       href: 'https://linkedin.com/in/mshahanwaz',
-      icon: <LinkedInIcon className="w-4 h-4" />,
-      external: true,
+      icon: <LinkedInIcon className="h-4 w-4" />,
+      external: true
     },
     {
       name: 'Instagram',
       href: 'https://instagram.com/imshahanwaz',
-      icon: <InstagramIcon className="w-4 h-4" />,
-      external: true,
+      icon: <InstagramIcon className="h-4 w-4" />,
+      external: true
     },
     {
       name: 'Email',
       href: 'mailto:mohdshahanwaz55@gmail.com',
-      icon: <MailIcon className="w-4 h-4" />,
-      external: true,
-    },
+      icon: <MailIcon className="h-4 w-4" />,
+      external: true
+    }
   ];
 
   const SelectTheme = () => (
-    <div className="group relative flex items-center px-3 py-2 rounded-lg hover:bg-white hover:text-black hover:shadow">
-      <div className="w-full flex items-center gap-3">
-        <span className="h-6 flex items-center">
-          <SunIcon className="w-4 h-4" />
+    <div className="group relative flex items-center rounded-lg px-3 py-2 hover:bg-white hover:text-gray-900 hover:shadow">
+      <div className="flex w-full items-center gap-3">
+        <span className="flex h-6 items-center">
+          <SunIcon className="h-4 w-4" />
         </span>
         <motion.div
           animate={{
             opacity: isOpen ? 1 : 0,
-            transition: { duration: 0.1, ease: 'easeOut' },
+            transition: { duration: 0.1, ease: 'easeOut' }
           }}
         >
           <span className={cn('whitespace-nowrap', !isOpen && 'hidden')}>
@@ -111,16 +112,16 @@ export default function Sidebar() {
         <motion.div
           animate={{
             opacity: isOpen ? 1 : 0,
-            transition: { duration: 0.1, ease: 'easeOut' },
+            transition: { duration: 0.1, ease: 'easeOut' }
           }}
           className="ml-auto text-gray-400 group-hover:text-gray-500"
         >
           <span className={cn(!isOpen && 'hidden')}>
-            <ChevronDownIcon className="w-4 h-4" />
+            <ChevronDownIcon className="h-4 w-4" />
           </span>
         </motion.div>
       </div>
-      <select className="absolute inset-0 w-full h-full opacity-0 appearance-none cursor-pointer">
+      <select className="absolute inset-0 h-full w-full cursor-pointer appearance-none opacity-0">
         <option value="light">Light Theme</option>
         <option value="dark">Dark Theme</option>
       </select>
@@ -133,34 +134,34 @@ export default function Sidebar() {
       animate={{
         opacity: 1,
         x: 0,
-        transition: { duration: 0.2, ease: 'easeOut' },
+        transition: { duration: 0.2, ease: 'easeOut' }
       }}
-      className="sticky top-0 h-screen flex flex-col text-gray-600 bg-gray-100 backdrop-blur-md border-r border-gray-200"
+      className="sticky top-0 flex h-screen flex-col border-r border-gray-200 bg-gray-100 text-gray-600 backdrop-blur-md"
     >
       <motion.nav
         animate={{
           width: isOpen ? 264 : 64,
-          transition: { duration: 0.1, ease: 'easeOut' },
+          transition: { duration: 0.1, ease: 'easeOut' }
         }}
-        className="flex-1 flex flex-col gap-2 p-3"
+        className="flex flex-1 flex-col gap-2 p-3"
       >
         {NAV_LINKS.map((link) => (
           <Link key={link.name} href={link.href}>
             <motion.div
               animate={{
                 width: isOpen ? 240 : 40,
-                transition: { duration: 0.1, ease: 'easeOut' },
+                transition: { duration: 0.1, ease: 'easeOut' }
               }}
               className={cn(
-                'flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white hover:text-black hover:shadow',
-                link.active && 'bg-white text-black font-medium shadow'
+                'flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-white hover:text-gray-900 hover:shadow',
+                link.active && 'bg-white font-medium text-gray-900 shadow'
               )}
             >
-              <span className="h-6 flex items-center">{link.icon}</span>
+              <span className="flex h-6 items-center">{link.icon}</span>
               <motion.div
                 animate={{
                   opacity: isOpen ? 1 : 0,
-                  transition: { duration: 0.1, ease: 'easeOut' },
+                  transition: { duration: 0.1, ease: 'easeOut' }
                 }}
               >
                 <span className={cn(!isOpen && 'hidden')}>{link.name}</span>
@@ -177,15 +178,15 @@ export default function Sidebar() {
             <motion.div
               animate={{
                 width: isOpen ? 240 : 40,
-                transition: { duration: 0.1, ease: 'easeOut' },
+                transition: { duration: 0.1, ease: 'easeOut' }
               }}
-              className="group flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-white hover:text-black hover:shadow"
+              className="group flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-white hover:text-gray-900 hover:shadow"
             >
-              <span className="h-6 flex items-center">{link.icon}</span>
+              <span className="flex h-6 items-center">{link.icon}</span>
               <motion.div
                 animate={{
                   opacity: isOpen ? 1 : 0,
-                  transition: { duration: 0.1, ease: 'easeOut' },
+                  transition: { duration: 0.1, ease: 'easeOut' }
                 }}
               >
                 <span className={cn(!isOpen && 'hidden')}>{link.name}</span>
@@ -193,12 +194,12 @@ export default function Sidebar() {
               <motion.div
                 animate={{
                   opacity: isOpen ? 1 : 0,
-                  transition: { duration: 0.1, ease: 'easeOut' },
+                  transition: { duration: 0.1, ease: 'easeOut' }
                 }}
                 className="ml-auto text-gray-400 group-hover:text-gray-500"
               >
                 <span className={cn(!isOpen && 'hidden')}>
-                  <ExternalIcon className="w-4 h-4" />
+                  <ArrowUpRightIcon className="h-4 w-4" />
                 </span>
               </motion.div>
             </motion.div>
@@ -207,10 +208,10 @@ export default function Sidebar() {
         <SelectTheme />
         <button
           onClick={() => setIsOpen((isOpen) => !isOpen)}
-          className="mt-auto flex items-center px-3 py-2 gap-3 hover:text-black"
+          className="mt-auto flex items-center gap-3 px-3 py-2 hover:text-gray-900"
         >
-          <span className={cn('h-6 flex items-center', isOpen && 'rotate-180')}>
-            <ChevronRightIcon className="w-4 h-4" />
+          <span className={cn('flex h-6 items-center', isOpen && 'rotate-180')}>
+            <ChevronRightIcon className="h-4 w-4" />
           </span>
         </button>
       </motion.nav>

@@ -5,7 +5,7 @@ export default function Timeline() {
   return (
     <>
       <Head>
-        <title>M. Shahanwaz | Timeline</title>
+        <title>M. Shahanwaz - Timeline</title>
         <meta name="description" content="Professional portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -16,10 +16,10 @@ export default function Timeline() {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
+          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' }
         }}
       >
-        <div className="wrapper px-4 py-16 flex flex-col gap-12">
+        <div className="wrapper flex flex-col gap-12 px-4 py-16">
           <h1 className="text-9xl">
             <span>Timeline</span>
           </h1>
