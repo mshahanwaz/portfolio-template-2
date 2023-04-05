@@ -10,7 +10,7 @@ const BLOGS = [
     title: 'Blog 1',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque ea rem, nostrum non et vero saepe quas repudiandae quis eos perspiciatis nemo, corrupti praesentium quasi veniam, facere laborum molestias.',
-    date: '2 days ago'
+    date: '9 days ago'
   },
   {
     id: 2,
@@ -75,7 +75,7 @@ export default function Blogs() {
                 href={`/blogs/${blog.slug}`}
                 className="space-border flex h-52 hover:bg-white"
               >
-                <div className="aspect-square h-full w-32 shrink-0 rounded-3xl bg-gray-200" />
+                <div className="aspect-square h-full w-32 shrink-0 rounded-l-3xl rounded-r-lg bg-gray-200" />
                 <div className="flex flex-col gap-2 px-6 py-4">
                   <h2 className="block text-2xl">{blog.title}</h2>
                   <p className="block text-base line-clamp-3">
