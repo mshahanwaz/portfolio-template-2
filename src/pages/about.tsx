@@ -17,7 +17,7 @@ export default function About() {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' }
+          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
@@ -40,7 +40,7 @@ export default function About() {
               />
             </span>
           </div>
-          <div className="flex flex-col gap-5 text-gray-700">
+          <div className="flex flex-col gap-5 text-gray-700 dark:text-gray-200">
             <p className="">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam

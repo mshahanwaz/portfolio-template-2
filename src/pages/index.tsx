@@ -12,7 +12,7 @@ const GALLERY = [
   'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-  'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+  'https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
 ];
 
 const GRID_SPANS = [
@@ -20,7 +20,7 @@ const GRID_SPANS = [
   'row-start-1 row-end-3 col-start-6 col-end-8',
   'row-start-3 row-end-5 col-start-6 col-end-8',
   'row-start-5 row-end-7 col-start-1 col-end-4',
-  'row-start-5 row-end-7 col-start-4 col-end-8'
+  'row-start-5 row-end-7 col-start-4 col-end-8',
 ];
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' }
+          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
@@ -48,7 +48,7 @@ export default function Home() {
           </h1>
           <div className="flex flex-col items-start gap-8 sm:flex-row ">
             <div className="w-2/3 space-y-8">
-              <p className="text-gray-700">
+              <p className="text-gray-700 dark:text-gray-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
                 quaerat nihil magnam inventore harum, dolore tenetur. Illo error
                 nisi excepturi eos ducimus. Debitis, accusamus necessitatibus
@@ -83,19 +83,23 @@ export default function Home() {
         <div className="space-y-16 py-16">
           <div className="wrapper space-y-3 px-4">
             <h3 className="text- text-3xl">Skills</h3>
-            <p className="text-gray-700">
+            <p className="text-gray-700 dark:text-gray-200">
               In the course of my professional journey, I have utilized various
               tools and technologies.
             </p>
           </div>
-          <div className="border-b border-gray-200 bg-pattern py-[98px]">
+          <div
+            className={cn(
+              'border-b border-gray-200 bg-pattern py-[98px] dark:border-gray-700 dark:bg-pattern-dark',
+            )}
+          >
             <Banner />
           </div>
         </div>
         <div className="wrapper space-y-16 px-4 py-16">
           <div className="wrapper space-y-3 px-4">
             <h3 className="text- text-3xl">Little Gallery</h3>
-            <p className="text-lg text-gray-700">
+            <p className="text-lg text-gray-700 dark:text-gray-200">
               In the course of my professional journey, I have utilized various
               tools and technologies.
             </p>
@@ -107,7 +111,7 @@ export default function Home() {
                   key={pictureIndex}
                   className={cn(
                     GRID_SPANS[pictureIndex],
-                    'overflow-hidden rounded-lg'
+                    'overflow-hidden rounded-lg',
                   )}
                 >
                   <img

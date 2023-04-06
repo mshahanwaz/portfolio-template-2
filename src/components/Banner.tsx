@@ -18,61 +18,61 @@ import mui from '@/assets/svgs/logos/mui.svg';
 const logos = [
   {
     src: reactjs.src,
-    alt: 'ReactJS'
+    alt: 'ReactJS',
   },
   {
     src: nextjs.src,
-    alt: 'NextJS'
+    alt: 'NextJS',
   },
   {
     src: ts.src,
-    alt: 'TypeScript'
+    alt: 'TypeScript',
   },
   {
     src: tailwind.src,
-    alt: 'TailwindCSS'
+    alt: 'TailwindCSS',
   },
   {
     src: mui.src,
-    alt: 'Material UI'
+    alt: 'Material UI',
   },
 
   {
     src: redux.src,
-    alt: 'Redux'
+    alt: 'Redux',
   },
   {
     src: recoil.src,
-    alt: 'Recoil'
+    alt: 'Recoil',
   },
   {
     src: nodejs.src,
-    alt: 'NodeJS'
+    alt: 'NodeJS',
   },
   {
     src: express.src,
-    alt: 'ExpressJS'
+    alt: 'ExpressJS',
   },
   {
     src: mongodb.src,
-    alt: 'MongoDB'
+    alt: 'MongoDB',
   },
   {
     src: firebase.src,
-    alt: 'Firebase'
+    alt: 'Firebase',
   },
   {
     src: github.src,
-    alt: 'GitHub'
+    alt: 'GitHub',
   },
   {
     src: gitlab.src,
-    alt: 'GitLab'
+    alt: 'GitLab',
   },
   {
     src: vscode.src,
-    alt: 'VSCode'
-  }
+    alt: 'VSCode',
+  },
 ];
 
 export default function Banner() {
@@ -82,7 +82,7 @@ export default function Banner() {
         {[...logos, ...logos].map((logo, index) => (
           <div
             key={index}
-            className="h-inherit inline-flex aspect-square min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900"
+            className="h-inherit inline-flex aspect-square min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50"
             title={logo.alt}
           >
             <img

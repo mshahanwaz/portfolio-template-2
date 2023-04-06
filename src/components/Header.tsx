@@ -13,7 +13,7 @@ export default function Header() {
       allRoutes.forEach((path) => {
         linksList.push({
           name: path.charAt(0).toUpperCase() + path.slice(1),
-          href: path
+          href: path,
         });
       });
       setCurrentRoutes(linksList);
@@ -22,12 +22,15 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center gap-4 border-b border-gray-200 bg-gray-100/80 px-6 backdrop-blur-md">
+    <header className="sticky top-0 z-10 flex h-16 shrink-0 items-center gap-4 border-b border-gray-200 bg-gray-100/80 px-6 backdrop-blur-md dark:border-gray-700">
       {currentRoutes.length > 0 && (
-        <div className="flex items-center gap-2 rounded-full border border-gray-200 bg-gray-100 px-4 py-1 text-sm text-gray-600 hover:bg-gray-200">
+        <div className="flex items-center gap-2 rounded-full border border-gray-200 bg-gray-100 px-4 py-1 text-sm text-gray-600 hover:bg-gray-200 dark:border-gray-700 dark:text-gray-300">
           {currentRoutes.map((route: any, index: number) => (
             <React.Fragment key={index}>
-              <Link href={route.href} className="hover:text-gray-900">
+              <Link
+                href={route.href}
+                className="hover:text-gray-900 dark:hover:text-gray-50"
+              >
                 {route.name}
               </Link>
               {index !== currentRoutes.length - 1 && <span>/</span>}

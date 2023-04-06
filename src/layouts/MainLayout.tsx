@@ -7,9 +7,14 @@ const inter = localFont({ src: '../assets/fonts/Inter.ttf' });
 
 export default function MainLayout({ children }: any) {
   return (
-    <div className={cn('flex items-start bg-gray-50', inter.className)}>
+    <div
+      className={cn(
+        'flex items-start bg-gray-50 dark:bg-gray-900',
+        inter.className,
+      )}
+    >
       <Sidebar />
-      <div className="w-full divide-y">
+      <div className="w-full">
         <main className="text-lg">{children}</main>
         <Footer />
       </div>

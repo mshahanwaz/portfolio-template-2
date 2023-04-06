@@ -10,7 +10,7 @@ const BLOGS = [
     title: 'Blog 1',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque ea rem, nostrum non et vero saepe quas repudiandae quis eos perspiciatis nemo, corrupti praesentium quasi veniam, facere laborum molestias.',
-    date: '9 days ago'
+    date: '9 days ago',
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const BLOGS = [
     title: 'Blog 2',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque ea rem, nostrum non et vero saepe.',
-    date: '3 days ago'
+    date: '3 days ago',
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const BLOGS = [
     title: 'Blog 3',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque ea rem, nostrum non et vero saepe quas repudiandae quis eos perspiciatis nemo, corrupti praesentium quasi veniam, facere laborum molestias.',
-    date: '4 days ago'
+    date: '4 days ago',
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const BLOGS = [
     title: 'Blog 4',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque ea rem, nostrum non et vero saepe quas repudiandae quis eos perspiciatis nemo, corrupti praesentium quasi veniam, facere laborum molestias.',
-    date: '5 days ago'
+    date: '5 days ago',
   },
   {
     id: 5,
@@ -42,8 +42,8 @@ const BLOGS = [
     title: 'Blog 5',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque ea rem, nostrum non et vero saepe quas repudiandae quis eos perspiciatis nemo, corrupti praesentium quasi veniam, facere laborum molestias.',
-    date: '6 days ago'
-  }
+    date: '6 days ago',
+  },
 ];
 
 export default function Blogs() {
@@ -61,7 +61,7 @@ export default function Blogs() {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' }
+          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
@@ -73,15 +73,15 @@ export default function Blogs() {
               <Link
                 key={blog.id}
                 href={`/blogs/${blog.slug}`}
-                className="space-border flex h-52 hover:bg-white"
+                className="space-border flex h-52 hover:bg-gray-50 dark:hover:bg-gray-900"
               >
-                <div className="aspect-square h-full w-32 shrink-0 rounded-l-3xl rounded-r-lg bg-gray-200" />
+                <div className="aspect-square h-full w-32 shrink-0 rounded-l-3xl rounded-r-lg bg-gray-200 dark:bg-gray-700" />
                 <div className="flex flex-col gap-2 px-6 py-4">
                   <h2 className="block text-2xl">{blog.title}</h2>
-                  <p className="block text-base line-clamp-3">
+                  <p className="block text-base text-gray-700 line-clamp-3 dark:text-gray-200">
                     {blog.description}
                   </p>
-                  <span className="mt-auto block text-sm text-gray-500">
+                  <span className="mt-auto block text-sm text-gray-500 dark:text-gray-400">
                     {blog.date}
                   </span>
                 </div>

@@ -30,14 +30,14 @@ const links = [
 
 export default function MiniSidebar() {
   return (
-    <aside className="w-16 p-2 flex flex-col gap-2 items-center bg-gray-100/80 border-l border-gray-200 backdrop-blur-md">
+    <aside className="flex w-16 flex-col items-center gap-2 border-l border-gray-200 bg-gray-100/80 p-2 backdrop-blur-md dark:border-gray-700">
       {links.map((link, index) => (
         <a
           key={index}
           href={link.href}
           className={cn(
-            'w-full aspect-square bg-gray-100 border border-gray-200 grid place-items-center rounded-full hover:bg-gray-200 group',
-            index === 1 && 'mt-auto'
+            'group grid aspect-square w-full place-items-center rounded-full border border-gray-200 bg-gray-100 hover:bg-gray-200 dark:border-gray-700',
+            index === 1 && 'mt-auto',
           )}
         >
           {link.icon({

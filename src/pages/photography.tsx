@@ -2,12 +2,13 @@
 import { motion } from 'framer-motion';
 
 const IMAGES = [
-  'https://images.unsplash.com/photo-1493612276216-ee3925520721?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
-  'https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-  'https://source.unsplash.com/random',
-  'https://images.unsplash.com/photo-1550686041-366ad85a1355?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-  'https://images.unsplash.com/photo-1468487422149-5edc5034604f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
-  'https://source.unsplash.com/random',
+  'https://images.unsplash.com/photo-1680151459595-1491bcaafbf3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=881&q=80',
+  'https://images.unsplash.com/photo-1680121231530-b8e6043e9448?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
+  'https://images.unsplash.com/photo-1680201976645-a9aef59e8094?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
+  'https://images.unsplash.com/photo-1679798237908-7b08ba087455?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  'https://images.unsplash.com/photo-1680029532150-088cd9e9638c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
+  'https://images.unsplash.com/photo-1679823571624-85963f19724f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
+  'https://images.unsplash.com/photo-1436892777614-be9a19edb568?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 ];
 
 export default function photography() {
@@ -27,13 +28,13 @@ export default function photography() {
         </h1>
         <div className="space-border overflow-hidden">
           <div className="flex gap-2 overflow-hidden rounded-3xl">
-            <div className="flex flex-1 flex-col gap-2">
+            <div className="flex flex-1 flex-col items-stretch gap-2">
               {IMAGES.map(
                 (img, i) =>
-                  i % 2 && (
-                    <div key={i} className="overflow-hidden rounded-lg">
+                  i % 3 === 1 && (
+                    <div key={i} className="flex-1 overflow-hidden rounded-lg">
                       <img
-                        className="hover-scale w-full object-cover"
+                        className="hover-scale h-full w-full object-cover"
                         src={img}
                         alt="my photo"
                       />
@@ -44,10 +45,24 @@ export default function photography() {
             <div className="flex flex-1 flex-col gap-2">
               {IMAGES.map(
                 (img, i) =>
-                  !(i % 2) && (
-                    <div key={i} className="overflow-hidden rounded-lg">
+                  i % 3 === 0 && (
+                    <div key={i} className="flex-1 overflow-hidden rounded-lg">
                       <img
-                        className="hover-scale w-full object-cover"
+                        className="hover-scale h-full w-full object-cover"
+                        src={img}
+                        alt="my photo"
+                      />
+                    </div>
+                  ),
+              ).filter(Boolean)}
+            </div>
+            <div className="flex flex-1 flex-col gap-2">
+              {IMAGES.map(
+                (img, i) =>
+                  i % 3 === 2 && (
+                    <div key={i} className="flex-1 overflow-hidden rounded-lg">
+                      <img
+                        className="hover-scale h-full w-full object-cover"
                         src={img}
                         alt="my photo"
                       />

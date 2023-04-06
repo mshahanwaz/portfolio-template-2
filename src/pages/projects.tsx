@@ -13,11 +13,11 @@ const projects = [
     image: [
       'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
       'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80'
+      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
     ],
     link: 'https://google.com',
     github: 'https://github.com',
-    techs: ['Next.js', 'Tailwind CSS', 'TypeScript']
+    techs: ['Next.js', 'Tailwind CSS', 'TypeScript'],
   },
   {
     title: 'Project 1',
@@ -26,12 +26,12 @@ const projects = [
     image: [
       'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
       'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80'
+      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
     ],
     link: 'https://google.com',
     github: 'https://github.com',
-    techs: ['Next.js', 'Tailwind CSS', 'TypeScript']
-  }
+    techs: ['Next.js', 'Tailwind CSS', 'TypeScript'],
+  },
 ];
 
 export default function Projects() {
@@ -48,14 +48,14 @@ export default function Projects() {
         animate={{
           opacity: 1,
           y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' }
+          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
           <h1 className="text-9xl">
             <span>Projects</span>
           </h1>
-          <div className="space-y-12 text-gray-600">
+          <div className="space-y-12 text-gray-600 dark:text-gray-300">
             {projects.map((project, projectIndex) => (
               <div
                 key={projectIndex}
@@ -69,8 +69,8 @@ export default function Projects() {
                       alt="project"
                     />
                   </div>
-                  <div className="col-span-4 row-span-3 flex flex-col gap-2 rounded-lg bg-gray-100 p-4">
-                    <h2 className="w-fit text-3xl font-bold text-gray-900 hover:bg-gray-200">
+                  <div className="col-span-4 row-span-3 flex flex-col gap-2 rounded-lg bg-gray-100 p-4 dark:bg-gray-800">
+                    <h2 className="w-fit text-3xl font-bold text-gray-900 hover:bg-gray-200 dark:text-gray-50 dark:hover:bg-gray-700">
                       <Link href={`/projects/${projectIndex}`}>
                         {project.title}
                       </Link>
@@ -79,7 +79,7 @@ export default function Projects() {
                     <div className="mt-auto flex flex-wrap gap-2 text-sm font-medium">
                       <Link
                         href={project.link}
-                        className="flex items-center gap-2 rounded-full bg-gray-200 px-3 py-1 hover:bg-gray-300 hover:text-gray-900"
+                        className="flex items-center gap-2 rounded-full bg-gray-200 px-3 py-1 hover:bg-gray-300 hover:text-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-gray-50"
                       >
                         <span>Link</span>
                         <span>
@@ -88,7 +88,7 @@ export default function Projects() {
                       </Link>
                       <Link
                         href={project.github}
-                        className="flex items-center gap-2 rounded-full bg-gray-200 px-4 py-1 hover:bg-gray-300 hover:text-gray-900"
+                        className="flex items-center gap-2 rounded-full bg-gray-200 px-4 py-1 hover:bg-gray-300 hover:text-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 dark:hover:text-gray-50"
                       >
                         <span>Github</span>
                         <span>
