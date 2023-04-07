@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
-import { SunIcon } from '@/assets/svgs/icons';
 import { motion } from 'framer-motion';
 
 export default function About() {
@@ -21,24 +20,23 @@ export default function About() {
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
-          <h1 className="text-9xl">
+          <h1 className="text-6xl sm:text-8xl md:text-9xl">
             <span>About</span>
           </h1>
-          <div className="space-border flex items-center gap-2">
-            <span className="overflow-hidden rounded-l-3xl rounded-r-lg">
-              <img
-                className="hover-scale object-cover"
-                src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
-                alt="my photo"
-              />
-            </span>
-            <span className="overflow-hidden rounded-r-3xl rounded-l-lg">
-              <img
-                className="hover-scale object-cover"
-                src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
-                alt="my photo"
-              />
-            </span>
+          <div className="space-border overflow-hidden">
+            <div className="flex flex-wrap gap-2 overflow-hidden rounded-3xl sm:flex-nowrap">
+              {Array(3)
+                .fill(0)
+                .map((_, i) => (
+                  <div key={i} className="overflow-hidden rounded-lg">
+                    <img
+                      className="hover-scale object-cover"
+                      src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
+                      alt="my photo"
+                    />
+                  </div>
+                ))}
+            </div>
           </div>
           <div className="flex flex-col gap-5 text-gray-700 dark:text-gray-200">
             <p className="">

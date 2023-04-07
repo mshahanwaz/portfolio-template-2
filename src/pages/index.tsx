@@ -104,7 +104,7 @@ export default function Home() {
               tools and technologies.
             </p>
           </div>
-          <div className="space-border h-full overflow-hidden">
+          <div className="space-border overflow-hidden">
             <div className="grid aspect-[7/6] grid-cols-7 grid-rows-6 gap-2 overflow-hidden rounded-3xl">
               {GALLERY.map((picture, pictureIndex) => (
                 <div

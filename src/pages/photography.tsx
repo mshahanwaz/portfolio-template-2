@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion';
+import Head from 'next/head';
 
 const IMAGES = [
   'https://images.unsplash.com/photo-1680151459595-1491bcaafbf3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=881&q=80',
@@ -13,66 +14,82 @@ const IMAGES = [
 
 export default function photography() {
   return (
-    <motion.div
-      className="space-y-20"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
-      }}
-    >
-      <div className="flex flex-col gap-12 px-4 py-16">
-        <h1 className="wrapper text-9xl">
-          <div>Photography</div>
-        </h1>
-        <div className="space-border overflow-hidden">
-          <div className="flex gap-2 overflow-hidden rounded-3xl">
-            <div className="flex flex-1 flex-col items-stretch gap-2">
-              {IMAGES.map(
-                (img, i) =>
-                  i % 3 === 1 && (
-                    <div key={i} className="flex-1 overflow-hidden rounded-lg">
-                      <img
-                        className="hover-scale h-full w-full object-cover"
-                        src={img}
-                        alt="my photo"
-                      />
-                    </div>
-                  ),
-              ).filter(Boolean)}
-            </div>
-            <div className="flex flex-1 flex-col gap-2">
-              {IMAGES.map(
-                (img, i) =>
-                  i % 3 === 0 && (
-                    <div key={i} className="flex-1 overflow-hidden rounded-lg">
-                      <img
-                        className="hover-scale h-full w-full object-cover"
-                        src={img}
-                        alt="my photo"
-                      />
-                    </div>
-                  ),
-              ).filter(Boolean)}
-            </div>
-            <div className="flex flex-1 flex-col gap-2">
-              {IMAGES.map(
-                (img, i) =>
-                  i % 3 === 2 && (
-                    <div key={i} className="flex-1 overflow-hidden rounded-lg">
-                      <img
-                        className="hover-scale h-full w-full object-cover"
-                        src={img}
-                        alt="my photo"
-                      />
-                    </div>
-                  ),
-              ).filter(Boolean)}
+    <>
+      <Head>
+        <title>M. Shahanwaz - Photography</title>
+        <meta name="description" content="Professional portfolio website" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <motion.div
+        className="space-y-20"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
+        }}
+      >
+        <div className="flex flex-col gap-12 px-4 py-16">
+          <h1 className="wrapper text-9xl">
+            <div>Photography</div>
+          </h1>
+          <div className="space-border overflow-hidden">
+            <div className="flex gap-2 overflow-hidden rounded-3xl">
+              <div className="flex flex-1 flex-col items-stretch gap-2">
+                {IMAGES.map(
+                  (img, i) =>
+                    i % 3 === 1 && (
+                      <div
+                        key={i}
+                        className="flex-1 overflow-hidden rounded-lg"
+                      >
+                        <img
+                          className="hover-scale h-full w-full object-cover"
+                          src={img}
+                          alt="my photo"
+                        />
+                      </div>
+                    ),
+                ).filter(Boolean)}
+              </div>
+              <div className="flex flex-1 flex-col gap-2">
+                {IMAGES.map(
+                  (img, i) =>
+                    i % 3 === 0 && (
+                      <div
+                        key={i}
+                        className="flex-1 overflow-hidden rounded-lg"
+                      >
+                        <img
+                          className="hover-scale h-full w-full object-cover"
+                          src={img}
+                          alt="my photo"
+                        />
+                      </div>
+                    ),
+                ).filter(Boolean)}
+              </div>
+              <div className="flex flex-1 flex-col gap-2">
+                {IMAGES.map(
+                  (img, i) =>
+                    i % 3 === 2 && (
+                      <div
+                        key={i}
+                        className="flex-1 overflow-hidden rounded-lg"
+                      >
+                        <img
+                          className="hover-scale h-full w-full object-cover"
+                          src={img}
+                          alt="my photo"
+                        />
+                      </div>
+                    ),
+                ).filter(Boolean)}
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </>
   );
 }
