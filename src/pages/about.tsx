@@ -29,8 +29,10 @@ export default function About() {
                 .fill(0)
                 .map((_, i) => (
                   <div key={i} className="overflow-hidden rounded-lg">
-                    <img
-                      className="hover-scale object-cover"
+                    <motion.img
+                      whileHover={{ scale: 1.25 }}
+                      transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
+                      className="h-full w-full object-cover"
                       src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
                       alt="my photo"
                     />

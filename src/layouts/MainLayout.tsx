@@ -8,23 +8,7 @@ import React from 'react';
 const inter = localFont({ src: '../assets/fonts/Inter.ttf' });
 
 export default function MainLayout({ children }: any) {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
-
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          setIsSidebarOpen(false);
-        }
-      });
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('keydown', () => {});
-      }
-    };
-  }, []);
+  const [isSidebarHidden, setIsSidebarHidden] = React.useState(true);
 
   return (
     <div
@@ -33,9 +17,9 @@ export default function MainLayout({ children }: any) {
         inter.className,
       )}
     >
-      <Sidebar open={isSidebarOpen} setOpen={setIsSidebarOpen} />
+      <Sidebar hidden={isSidebarHidden} setHidden={setIsSidebarHidden} />
       <div className="w-full">
-        <Header open={isSidebarOpen} setOpen={setIsSidebarOpen} />
+        <Header hidden={isSidebarHidden} setHidden={setIsSidebarHidden} />
         <main className="text-lg">{children}</main>
         <Footer />
       </div>

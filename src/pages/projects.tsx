@@ -63,8 +63,10 @@ export default function Projects() {
               >
                 <div className="grid aspect-[4/2] grid-cols-8 grid-rows-6 gap-2 overflow-hidden rounded-3xl">
                   <div className="col-span-4 row-span-6 overflow-hidden rounded-lg">
-                    <img
-                      className="hover-scale inline h-full object-cover object-center"
+                    <motion.img
+                      whileHover={{ scale: 1.25 }}
+                      transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
+                      className="h-full object-cover object-center"
                       src={project.image[0]}
                       alt="project"
                     />
@@ -104,8 +106,10 @@ export default function Projects() {
                         key={index}
                         className="col-span-2 row-span-3 overflow-hidden rounded-lg"
                       >
-                        <img
-                          className="hover-scale inline h-full object-cover object-center"
+                        <motion.img
+                          whileHover={{ scale: 1.25 }}
+                          transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
+                          className="h-full object-cover object-center"
                           src={project.image[1 + index]}
                           alt="project"
                         />

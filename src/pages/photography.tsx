@@ -43,8 +43,10 @@ export default function photography() {
                         key={i}
                         className="flex-1 overflow-hidden rounded-lg"
                       >
-                        <img
-                          className="hover-scale h-full w-full object-cover"
+                        <motion.img
+                          whileHover={{ scale: 1.25 }}
+                          transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
+                          className="h-full w-full object-cover"
                           src={img}
                           alt="my photo"
                         />
@@ -60,8 +62,10 @@ export default function photography() {
                         key={i}
                         className="flex-1 overflow-hidden rounded-lg"
                       >
-                        <img
-                          className="hover-scale h-full w-full object-cover"
+                        <motion.img
+                          whileHover={{ scale: 1.25 }}
+                          transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
+                          className="h-full w-full object-cover"
                           src={img}
                           alt="my photo"
                         />
@@ -77,8 +81,10 @@ export default function photography() {
                         key={i}
                         className="flex-1 overflow-hidden rounded-lg"
                       >
-                        <img
-                          className="hover-scale h-full w-full object-cover"
+                        <motion.img
+                          whileHover={{ scale: 1.25 }}
+                          transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
+                          className="h-full w-full object-cover"
                           src={img}
                           alt="my photo"
                         />

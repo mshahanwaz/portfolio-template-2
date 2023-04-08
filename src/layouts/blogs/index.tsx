@@ -73,17 +73,19 @@ export default function Blogs() {
               <Link
                 key={blog.id}
                 href={`/blogs/${blog.slug}`}
-                className="space-border flex h-52 hover:bg-gray-50 dark:hover:bg-gray-900"
+                className="space-border overflow-hidden"
               >
-                <div className="aspect-square h-full w-32 shrink-0 rounded-l-3xl rounded-r-lg bg-gray-200 dark:bg-gray-700" />
-                <div className="flex flex-col gap-2 px-6 py-4">
-                  <h2 className="block text-2xl">{blog.title}</h2>
-                  <p className="block text-base text-gray-700 line-clamp-3 dark:text-gray-200">
-                    {blog.description}
-                  </p>
-                  <span className="mt-auto block text-sm text-gray-500 dark:text-gray-400">
-                    {blog.date}
-                  </span>
+                <div className="flex h-52 gap-2 overflow-hidden rounded-3xl">
+                  <div className="aspect-square h-full w-32 shrink-0 rounded-lg bg-gray-100 dark:bg-gray-800" />
+                  <div className="flex flex-col gap-2 rounded-lg bg-gray-100 p-4 dark:bg-gray-800">
+                    <h2 className="block text-2xl">{blog.title}</h2>
+                    <p className="block text-base text-gray-700 line-clamp-3 dark:text-gray-200">
+                      {blog.description}
+                    </p>
+                    <span className="mt-auto block text-sm text-gray-500 dark:text-gray-400">
+                      {blog.date}
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}

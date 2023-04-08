@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
 import github from '@/assets/svgs/logos/github.svg';
 import gitlab from '@/assets/svgs/logos/gitlab.svg';
 import vscode from '@/assets/svgs/logos/vscode.svg';
@@ -15,7 +14,7 @@ import nextjs from '@/assets/svgs/logos/nextjs.svg';
 import reactjs from '@/assets/svgs/logos/reactjs.svg';
 import mui from '@/assets/svgs/logos/mui.svg';
 
-const logos = [
+const technologiesImageList = [
   {
     src: reactjs.src,
     alt: 'ReactJS',
@@ -79,20 +78,22 @@ export default function Banner() {
   return (
     <div className="group relative h-[60px] overflow-hidden">
       <div className="h-inherit group-hover:pause absolute top-0 left-0 animate-banner whitespace-nowrap">
-        {[...logos, ...logos].map((logo, index) => (
-          <div
-            key={index}
-            className="h-inherit inline-flex aspect-square min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50"
-            title={logo.alt}
-          >
-            <img
-              className="h-inherit inline max-w-none"
-              src={logo.src}
-              alt={logo.alt}
-            />
-            <span className="text-lg font-medium">{logo.alt}</span>
-          </div>
-        ))}
+        {[...technologiesImageList, ...technologiesImageList].map(
+          (technologyImage, index) => (
+            <div
+              key={index}
+              className="h-inherit inline-flex aspect-square min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50"
+              title={technologyImage.alt}
+            >
+              <img
+                className="h-inherit inline max-w-none"
+                src={technologyImage.src}
+                alt={technologyImage.alt}
+              />
+              <span className="text-lg font-medium">{technologyImage.alt}</span>
+            </div>
+          ),
+        )}
       </div>
     </div>
   );

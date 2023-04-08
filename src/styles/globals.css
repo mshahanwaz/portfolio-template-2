@@ -16,10 +16,7 @@
     @apply mx-auto w-full max-w-4xl;
   }
   .space-border {
-    @apply rounded-[2rem] border border-gray-200 p-2 dark:border-gray-700;
-  }
-  .hover-scale {
-    @apply transition-transform duration-1000 ease-[cubic-bezier(0.5,0.25,0,1)] hover:scale-125 dark:border-gray-700;
+    @apply rounded-[2rem] border border-gray-200 p-2  dark:border-gray-700;
   }
 }
 
