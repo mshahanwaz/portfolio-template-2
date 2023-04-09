@@ -17,8 +17,6 @@ export default function photography() {
     <>
       <Head>
         <title>M. Shahanwaz - Photography</title>
-        <meta name="description" content="Professional portfolio website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <motion.div
         className="space-y-20"
@@ -30,11 +28,9 @@ export default function photography() {
         }}
       >
         <div className="flex flex-col gap-12 px-4 py-16">
-          <h1 className="wrapper text-9xl">
-            <div>Photography</div>
-          </h1>
+          <h1 className="wrapper">Photography</h1>
           <div className="space-border overflow-hidden">
-            <div className="flex gap-2 overflow-hidden rounded-3xl">
+            <div className="flex flex-col gap-2 overflow-hidden rounded-3xl md:flex-row">
               <div className="flex flex-1 flex-col items-stretch gap-2">
                 {IMAGES.map(
                   (img, i) =>
@@ -44,11 +40,12 @@ export default function photography() {
                         className="flex-1 overflow-hidden rounded-lg"
                       >
                         <motion.img
+                          onContextMenu={(e) => e.preventDefault()}
                           whileHover={{ scale: 1.25 }}
                           transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
                           className="h-full w-full object-cover"
                           src={img}
-                          alt="my photo"
+                          alt="gallery shots"
                         />
                       </div>
                     ),
@@ -63,11 +60,12 @@ export default function photography() {
                         className="flex-1 overflow-hidden rounded-lg"
                       >
                         <motion.img
+                          onContextMenu={(e) => e.preventDefault()}
                           whileHover={{ scale: 1.25 }}
                           transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
-                          className="h-full w-full object-cover"
+                          className="h-auto w-full object-cover"
                           src={img}
-                          alt="my photo"
+                          alt="gallery shots"
                         />
                       </div>
                     ),
@@ -82,11 +80,12 @@ export default function photography() {
                         className="flex-1 overflow-hidden rounded-lg"
                       >
                         <motion.img
+                          onContextMenu={(e) => e.preventDefault()}
                           whileHover={{ scale: 1.25 }}
                           transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
                           className="h-full w-full object-cover"
                           src={img}
-                          alt="my photo"
+                          alt="gallery shots"
                         />
                       </div>
                     ),

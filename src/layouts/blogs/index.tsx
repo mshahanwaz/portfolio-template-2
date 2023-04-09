@@ -79,7 +79,7 @@ export default function Blogs() {
                   <div className="aspect-square h-full w-32 shrink-0 rounded-lg bg-gray-100 dark:bg-gray-800" />
                   <div className="flex flex-col gap-2 rounded-lg bg-gray-100 p-4 dark:bg-gray-800">
                     <h2 className="block text-2xl">{blog.title}</h2>
-                    <p className="block text-base text-gray-700 line-clamp-3 dark:text-gray-200">
+                    <p className="block text-base line-clamp-3">
                       {blog.description}
                     </p>
                     <span className="mt-auto block text-sm text-gray-500 dark:text-gray-400">

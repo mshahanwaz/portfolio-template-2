@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const projects = [
+const PROJECTS = [
   {
     title: 'Project 1',
     brief:
@@ -52,32 +52,33 @@ export default function Projects() {
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
-          <h1 className="text-9xl">
-            <span>Projects</span>
-          </h1>
+          <h1>Projects</h1>
           <div className="space-y-12 text-gray-600 dark:text-gray-300">
-            {projects.map((project, projectIndex) => (
+            {PROJECTS.map((project, projectIndex) => (
               <div
                 key={projectIndex}
                 className="space-border overflow-hidden rounded-3xl"
               >
-                <div className="grid aspect-[4/2] grid-cols-8 grid-rows-6 gap-2 overflow-hidden rounded-3xl">
+                <div className="flex flex-wrap gap-2 overflow-hidden rounded-3xl lg:grid lg:aspect-[2] lg:grid-cols-8 lg:grid-rows-6">
                   <div className="col-span-4 row-span-6 overflow-hidden rounded-lg">
                     <motion.img
+                      onContextMenu={(e) => e.preventDefault()}
                       whileHover={{ scale: 1.25 }}
                       transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
-                      className="h-full object-cover object-center"
+                      className="aspect-video h-full object-cover object-center lg:aspect-auto"
                       src={project.image[0]}
-                      alt="project"
+                      alt={project.title}
                     />
                   </div>
-                  <div className="col-span-4 row-span-3 flex flex-col gap-2 rounded-lg bg-gray-100 p-4 dark:bg-gray-800">
+                  <div className="order-4 flex flex-col gap-4 rounded-lg bg-gray-100 p-4 dark:bg-gray-800 lg:order-2 lg:col-span-4 lg:row-span-3 lg:gap-2">
                     <h2 className="w-fit text-3xl font-bold text-gray-900 hover:bg-gray-200 dark:text-gray-50 dark:hover:bg-gray-700">
                       <Link href={`/projects/${projectIndex}`}>
                         {project.title}
                       </Link>
                     </h2>
-                    <p className="text-base line-clamp-3">{project.brief}</p>
+                    <p className="text-base lg:leading-[1.3rem] lg:line-clamp-3">
+                      {project.brief}
+                    </p>
                     <div className="mt-auto flex flex-wrap gap-2 text-sm font-medium">
                       <Link
                         href={project.link}
@@ -104,14 +105,18 @@ export default function Projects() {
                     .map((_, index) => (
                       <div
                         key={index}
-                        className="col-span-2 row-span-3 overflow-hidden rounded-lg"
+                        className="w-1/2 flex-1 overflow-hidden rounded-lg lg:col-span-2 lg:row-span-3 lg:w-full"
                       >
                         <motion.img
+                          onContextMenu={(e) => e.preventDefault()}
                           whileHover={{ scale: 1.25 }}
-                          transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
+                          transition={{
+                            duration: 1,
+                            ease: [0.5, 0.25, 0, 1],
+                          }}
                           className="h-full object-cover object-center"
                           src={project.image[1 + index]}
-                          alt="project"
+                          alt={project.title}
                         />
                       </div>
                     ))}

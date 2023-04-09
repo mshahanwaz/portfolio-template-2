@@ -13,8 +13,9 @@ import tailwind from '@/assets/svgs/logos/tailwind.svg';
 import nextjs from '@/assets/svgs/logos/nextjs.svg';
 import reactjs from '@/assets/svgs/logos/reactjs.svg';
 import mui from '@/assets/svgs/logos/mui.svg';
+import cn from '@/core/utils/cn';
 
-const technologiesImageList = [
+const TECHS = [
   {
     src: reactjs.src,
     alt: 'ReactJS',
@@ -22,6 +23,7 @@ const technologiesImageList = [
   {
     src: nextjs.src,
     alt: 'NextJS',
+    invert: true,
   },
   {
     src: ts.src,
@@ -43,6 +45,7 @@ const technologiesImageList = [
   {
     src: recoil.src,
     alt: 'Recoil',
+    invert: true,
   },
   {
     src: nodejs.src,
@@ -63,6 +66,7 @@ const technologiesImageList = [
   {
     src: github.src,
     alt: 'GitHub',
+    invert: true,
   },
   {
     src: gitlab.src,
@@ -78,22 +82,23 @@ export default function Banner() {
   return (
     <div className="group relative h-[60px] overflow-hidden">
       <div className="h-inherit group-hover:pause absolute top-0 left-0 animate-banner whitespace-nowrap">
-        {[...technologiesImageList, ...technologiesImageList].map(
-          (technologyImage, index) => (
-            <div
-              key={index}
-              className="h-inherit inline-flex aspect-square min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50"
-              title={technologyImage.alt}
-            >
-              <img
-                className="h-inherit inline max-w-none"
-                src={technologyImage.src}
-                alt={technologyImage.alt}
-              />
-              <span className="text-lg font-medium">{technologyImage.alt}</span>
-            </div>
-          ),
-        )}
+        {[...TECHS, ...TECHS].map((tech, index) => (
+          <div
+            key={index}
+            className="h-inherit inline-flex aspect-square min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50"
+            title={tech.alt}
+          >
+            <img
+              className={cn(
+                'h-inherit inline max-w-none',
+                tech.invert && 'dark:invert',
+              )}
+              src={tech.src}
+              alt={tech.alt}
+            />
+            <span className="text-lg font-medium">{tech.alt}</span>
+          </div>
+        ))}
       </div>
     </div>
   );

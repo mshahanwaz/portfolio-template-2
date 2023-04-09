@@ -62,10 +62,7 @@ export default function Timeline() {
   return (
     <>
       <Head>
-        <title>M. Shahanwaz - Timeline</title>
-        <meta name="description" content="Professional portfolio website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Timeline - M. Shahanwaz</title>
       </Head>
       <motion.div
         className="space-y-20"
@@ -77,27 +74,28 @@ export default function Timeline() {
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
-          <h1 className="text-9xl">
-            <span>Timeline</span>
-          </h1>
-          <div className="relative text-gray-700 dark:text-gray-200">
+          <h1>Timeline</h1>
+          <div className="relative">
             <div className="flex">
               <div style={{ width: `${SIZE}%` }} />
               <div
                 className="flex flex-col"
                 style={{ width: `${100 - SIZE}%` }}
               >
-                <div className="w-fit -translate-x-1/2 rounded-full border-2 border-gray-200 py-1 px-4 text-sm font-medium text-gray-600 dark:border-gray-700 dark:text-gray-300">
-                  Begin
+                <div className="w-fit -translate-x-1/2 rounded-full border-2 border-gray-200 py-1 px-4 text-center text-sm font-medium text-gray-400 dark:border-gray-700 dark:text-gray-500">
+                  2002: Let&apos;s go 🚀
                 </div>
                 <div className="h-20 w-0 -translate-x-1/2 border-l-2 border-dashed border-gray-200 dark:border-gray-700" />
               </div>
             </div>
             {TIMELINE.map((item, index) => (
               <div key={index} className="relative flex">
-                <div className="space-y-2 p-6" style={{ width: `${SIZE}%` }}>
+                <div
+                  className="space-y-2 py-6 pr-4"
+                  style={{ width: `${SIZE}%` }}
+                >
                   <div className="h-5 w-full" />
-                  <div className="text-lg font-medium text-gray-900 dark:text-gray-50">
+                  <div className="text-base font-medium text-gray-500 dark:text-gray-400 sm:text-lg">
                     {item.category}
                   </div>
                 </div>
@@ -109,7 +107,7 @@ export default function Timeline() {
                     <div
                       key={eventIndex}
                       className={cn(
-                        'group relative flex flex-col gap-2 px-6 pt-6',
+                        'group relative flex flex-col gap-2 pl-6 pt-6',
                         eventIndex === item.events.length - 1 &&
                           index !== TIMELINE.length - 1
                           ? 'pb-12'
@@ -119,10 +117,12 @@ export default function Timeline() {
                       <div className="text-sm font-medium text-gray-500">
                         {event.date}
                       </div>
-                      <h2 className="relative text-2xl font-bold tracking-tight duration-1000 before:absolute before:-left-6 before:top-2 before:z-10 before:h-4 before:w-4 before:-translate-x-1/2 before:rounded-full before:bg-gray-300 before:content-[''] after:absolute after:-left-6 after:top-3 after:z-10 after:h-2 after:w-2 after:-translate-x-1/2 after:scale-0 after:rounded-full after:bg-gray-500 after:transition-transform after:content-[''] group-hover:after:scale-100 dark:before:bg-gray-600 dark:after:bg-gray-400">
+                      <h2 className="relative text-lg font-bold tracking-tight transition-transform duration-1000 before:absolute before:-left-6 before:top-2 before:z-10 before:h-4 before:w-4 before:-translate-x-1/2 before:rounded-full before:bg-gray-300 before:content-[''] after:absolute after:-left-6 after:top-3 after:z-10 after:h-2 after:w-2 after:-translate-x-1/2 after:scale-0 after:rounded-full after:bg-gray-500 after:transition-transform after:content-[''] group-hover:after:scale-100 dark:before:bg-gray-600 dark:after:bg-gray-400 lg:text-2xl">
                         {event.title}
                       </h2>
-                      <p className="text-base">{event.description}</p>
+                      <p className="text-sm sm:text-base">
+                        {event.description}
+                      </p>
                       <div className="absolute top-0 left-0 h-full w-0.5 -translate-x-1/2 bg-gray-200 dark:bg-gray-700" />
                     </div>
                   ))}
@@ -136,8 +136,8 @@ export default function Timeline() {
                 style={{ width: `${100 - SIZE}%` }}
               >
                 <div className="h-20 w-0 -translate-x-1/2 border-l-2 border-dashed border-gray-200 dark:border-gray-700" />
-                <div className="w-fit -translate-x-1/2 rounded-full border-2 border-gray-200 py-1 px-4 text-sm font-medium text-gray-600 dark:border-gray-700 dark:text-gray-300">
-                  Cooking more stuffs...
+                <div className="w-fit -translate-x-1/2 rounded-full border-2 border-gray-200 py-1 px-4 text-sm font-medium text-gray-400 dark:border-gray-700 dark:text-gray-500">
+                  More stuffs on the way...
                 </div>
               </div>
             </div>

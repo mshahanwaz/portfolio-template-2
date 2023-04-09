@@ -42,13 +42,13 @@ export default function Home() {
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
-          <h1 className="text-9xl">
+          <h1>
             <div>M.</div>
             <div>Shahanwaz</div>
           </h1>
-          <div className="flex flex-col items-start gap-8 sm:flex-row ">
-            <div className="w-2/3 space-y-8">
-              <p className="text-gray-700 dark:text-gray-200">
+          <div className="flex flex-col-reverse items-start gap-8 lg:flex-row">
+            <div className="w-full space-y-8 lg:w-2/3">
+              <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
                 quaerat nihil magnam inventore harum, dolore tenetur. Illo error
                 nisi excepturi eos ducimus. Debitis, accusamus necessitatibus
@@ -71,19 +71,24 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-            <div className="w-1/3">
-              <img
-                className="space-border aspect-square max-h-[248px] w-full object-cover"
-                src="https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                alt=""
-              />
+            <div className="space-border w-full overflow-hidden lg:w-1/3">
+              <div className="overflow-hidden rounded-3xl">
+                <motion.img
+                  onContextMenu={(e) => e.preventDefault()}
+                  whileHover={{ scale: 1.25 }}
+                  transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
+                  className="aspect-video w-full rounded-lg object-cover md:aspect-video lg:aspect-square lg:max-h-[248px]"
+                  src="https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  alt="my pic"
+                />
+              </div>
             </div>
           </div>
         </div>
         <div className="space-y-16 py-16">
           <div className="wrapper space-y-3 px-4">
-            <h3 className="text- text-3xl">Skills</h3>
-            <p className="text-gray-700 dark:text-gray-200">
+            <h3>Skills</h3>
+            <p>
               In the course of my professional journey, I have utilized various
               tools and technologies.
             </p>
@@ -97,27 +102,28 @@ export default function Home() {
           </div>
         </div>
         <div className="wrapper space-y-16 px-4 py-16">
-          <div className="wrapper space-y-3 px-4">
-            <h3 className="text- text-3xl">Little Gallery</h3>
-            <p className="text-lg text-gray-700 dark:text-gray-200">
+          <div className="space-y-3 px-4">
+            <h3>Little Gallery</h3>
+            <p className="text-lg">
               In the course of my professional journey, I have utilized various
               tools and technologies.
             </p>
           </div>
           <div className="space-border overflow-hidden">
-            <div className="grid aspect-[7/6] grid-cols-7 grid-rows-6 gap-2 overflow-hidden rounded-3xl">
+            <div className="flex flex-col gap-2 overflow-hidden rounded-3xl md:grid md:aspect-[7/6] md:grid-cols-7 md:grid-rows-6">
               {GALLERY.map((picture, pictureIndex) => (
                 <div
                   key={pictureIndex}
                   className={cn(
                     GRID_SPANS[pictureIndex],
-                    'overflow-hidden rounded-lg',
+                    'overflow-hidden rounded-lg md:aspect-auto',
                   )}
                 >
                   <motion.img
+                    onContextMenu={(e) => e.preventDefault()}
                     whileHover={{ scale: 1.25 }}
                     transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
-                    className="h-full w-full object-cover"
+                    className="aspect-video h-full w-full object-cover"
                     src={picture}
                     alt=""
                   />

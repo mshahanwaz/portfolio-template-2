@@ -4,8 +4,13 @@ import Sidebar from '@/components/Sidebar';
 import cn from '@/core/utils/cn';
 import localFont from 'next/font/local';
 import React from 'react';
+import { Fira_Code } from 'next/font/google';
 
-const inter = localFont({ src: '../assets/fonts/Inter.ttf' });
+const inter = localFont({
+  src: '../assets/fonts/Inter.ttf',
+  variable: '--font-sans',
+});
+const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-mono' });
 
 export default function MainLayout({ children }: any) {
   const [isSidebarHidden, setIsSidebarHidden] = React.useState(true);
@@ -13,8 +18,9 @@ export default function MainLayout({ children }: any) {
   return (
     <div
       className={cn(
-        'flex items-start bg-gray-50 dark:bg-gray-900',
-        inter.className,
+        'flex items-start bg-gray-50 font-sans dark:bg-gray-900',
+        inter.variable,
+        firaCode.variable,
       )}
     >
       <Sidebar hidden={isSidebarHidden} setHidden={setIsSidebarHidden} />

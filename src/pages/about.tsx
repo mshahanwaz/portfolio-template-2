@@ -20,9 +20,7 @@ export default function About() {
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
-          <h1 className="text-6xl sm:text-8xl md:text-9xl">
-            <span>About</span>
-          </h1>
+          <h1>About</h1>
           <div className="space-border overflow-hidden">
             <div className="flex flex-wrap gap-2 overflow-hidden rounded-3xl sm:flex-nowrap">
               {Array(3)
@@ -30,6 +28,7 @@ export default function About() {
                 .map((_, i) => (
                   <div key={i} className="overflow-hidden rounded-lg">
                     <motion.img
+                      onContextMenu={(e) => e.preventDefault()}
                       whileHover={{ scale: 1.25 }}
                       transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
                       className="h-full w-full object-cover"
@@ -40,8 +39,8 @@ export default function About() {
                 ))}
             </div>
           </div>
-          <div className="flex flex-col gap-5 text-gray-700 dark:text-gray-200">
-            <p className="">
+          <div className="space-y-8">
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam
               sequi ullam, ducimus ipsum amet commodi, adipisci ab nobis minima
@@ -56,7 +55,7 @@ export default function About() {
               provident distinctio nam illum reiciendis dolorum voluptas minima
               aperiam. Magni, velit!
             </p>
-            <p className="">
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam
               sequi ullam, ducimus ipsum amet commodi, adipisci ab nobis minima
@@ -71,7 +70,7 @@ export default function About() {
               provident distinctio nam illum reiciendis dolorum voluptas minima
               aperiam. Magni, velit!
             </p>
-            <p className="">
+            <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
               quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam
               sequi ullam, ducimus ipsum amet commodi, adipisci ab nobis minima

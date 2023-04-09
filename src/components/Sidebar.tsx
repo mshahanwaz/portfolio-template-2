@@ -24,39 +24,10 @@ import { capitalize } from '@/core/utils/string';
 import MoonIcon from '@/assets/svgs/icons/MoonIcon';
 import MonitorIcon from '@/assets/svgs/icons/MonitorIcon';
 
+type Theme = 'light' | 'dark' | 'system';
+
 export default function Sidebar({ hidden, setHidden }: any) {
   const { pathname } = useRouter();
-  const [theme, setTheme] = React.useState<Theme>('system');
-  const [isOpen, setIsOpen] = React.useState<boolean>(true);
-  const [isMobile, setIsMobile] = React.useState<boolean>(false);
-
-  const handleResize = () => {
-    if (window.innerWidth < 768) {
-      setIsMobile(true);
-      setIsOpen(true);
-    } else {
-      setIsMobile(false);
-    }
-  };
-
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      handleResize();
-      window.addEventListener('resize', handleResize);
-    }
-
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('resize', () => {
-          if (window.innerWidth < 768) {
-            setIsMobile(true);
-          } else {
-            setIsMobile(false);
-          }
-        });
-      }
-    };
-  }, []);
 
   const NAV_LINKS = [
     {
@@ -124,6 +95,19 @@ export default function Sidebar({ hidden, setHidden }: any) {
     },
   ];
 
+  const [theme, setTheme] = React.useState<Theme>('system');
+  const [isOpen, setIsOpen] = React.useState<boolean>(true);
+  const [isMobile, setIsMobile] = React.useState<boolean>(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+      setIsOpen(true);
+    } else {
+      setIsMobile(false);
+    }
+  };
+
   const handleOpen = () => {
     if (isMobile) {
       setHidden(!hidden);
@@ -162,6 +146,25 @@ export default function Sidebar({ hidden, setHidden }: any) {
       }
     }
   }
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
+      handleResize();
+      window.addEventListener('resize', handleResize);
+    }
+
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('resize', () => {
+          if (window.innerWidth < 768) {
+            setIsMobile(true);
+          } else {
+            setIsMobile(false);
+          }
+        });
+      }
+    };
+  }, []);
 
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -207,52 +210,6 @@ export default function Sidebar({ hidden, setHidden }: any) {
     };
   }, []);
 
-  const SelectTheme = () => (
-    <div className="group relative flex items-center rounded-lg px-3 py-2 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-50 ">
-      <div className="flex w-full items-center gap-3">
-        <span className="flex h-6 items-center">
-          {theme === 'dark' ? (
-            <MoonIcon className="h-4 w-4" />
-          ) : theme === 'light' ? (
-            <SunIcon className="h-4 w-4" />
-          ) : (
-            <MonitorIcon className="h-4 w-4" />
-          )}
-        </span>
-        <motion.div
-          animate={{
-            opacity: isOpen ? 1 : 0,
-            transition: { duration: 0.1, ease: 'easeOut' },
-          }}
-        >
-          <span className={cn('whitespace-nowrap', !isOpen && 'hidden')}>
-            {capitalize(theme)}
-          </span>
-        </motion.div>
-        <motion.div
-          animate={{
-            opacity: isOpen ? 1 : 0,
-            transition: { duration: 0.1, ease: 'easeOut' },
-          }}
-          className="ml-auto text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
-        >
-          <span className={cn(!isOpen && 'hidden')}>
-            <ChevronDownIcon className="h-4 w-4" />
-          </span>
-        </motion.div>
-      </div>
-      <select
-        value={theme}
-        onChange={handleThemeChange}
-        className="absolute top-0 left-0 z-10 h-full w-full cursor-pointer text-gray-900 opacity-0 dark:bg-gray-700 dark:text-gray-50"
-      >
-        <option value="system">System</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </div>
-  );
-
   return (
     <>
       <motion.aside
@@ -263,7 +220,7 @@ export default function Sidebar({ hidden, setHidden }: any) {
           transition: { duration: 0.2, ease: 'easeOut' },
         }}
         className={cn(
-          'fixed top-0 left-0 z-30 flex h-screen flex-col border-r border-gray-200 bg-gray-100/80 text-gray-600 backdrop-blur-md dark:border-gray-700 dark:bg-gray-800/80 dark:text-gray-300 md:sticky',
+          'fixed top-0 left-0 z-30 flex h-screen flex-col border-r border-gray-200 bg-gray-100 text-gray-500 backdrop-blur-md dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:sticky',
         )}
       >
         <motion.nav
@@ -280,6 +237,7 @@ export default function Sidebar({ hidden, setHidden }: any) {
               onClick={() => {
                 if (isMobile) setHidden(true);
               }}
+              title={link.name}
             >
               <motion.div
                 animate={{
@@ -309,6 +267,7 @@ export default function Sidebar({ hidden, setHidden }: any) {
               key={link.name}
               href={link.href}
               {...(link.external && { target: '_blank', rel: 'noreferrer' })}
+              title={link.name}
             >
               <motion.div
                 animate={{
@@ -340,7 +299,11 @@ export default function Sidebar({ hidden, setHidden }: any) {
               </motion.div>
             </a>
           ))}
-          <SelectTheme />
+          <SelectTheme
+            {...{ theme }}
+            {...{ isOpen }}
+            {...{ handleThemeChange }}
+          />
           <button
             onClick={handleOpen}
             className="group mt-auto flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-50"
@@ -383,4 +346,48 @@ export default function Sidebar({ hidden, setHidden }: any) {
   );
 }
 
-type Theme = 'light' | 'dark' | 'system';
+const SelectTheme = ({ theme, isOpen, handleThemeChange }: any) => (
+  <div className="group relative flex items-center rounded-lg px-3 py-2 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-50 ">
+    <div className="flex w-full items-center gap-3">
+      <span className="flex h-6 items-center">
+        {theme === 'dark' ? (
+          <MoonIcon className="h-4 w-4" />
+        ) : theme === 'light' ? (
+          <SunIcon className="h-4 w-4" />
+        ) : (
+          <MonitorIcon className="h-4 w-4" />
+        )}
+      </span>
+      <motion.div
+        animate={{
+          opacity: isOpen ? 1 : 0,
+          transition: { duration: 0.1, ease: 'easeOut' },
+        }}
+      >
+        <span className={cn('whitespace-nowrap', !isOpen && 'hidden')}>
+          {capitalize(theme)}
+        </span>
+      </motion.div>
+      <motion.div
+        animate={{
+          opacity: isOpen ? 1 : 0,
+          transition: { duration: 0.1, ease: 'easeOut' },
+        }}
+        className="ml-auto text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+      >
+        <span className={cn(!isOpen && 'hidden')}>
+          <ChevronDownIcon className="h-4 w-4" />
+        </span>
+      </motion.div>
+    </div>
+    <select
+      value={theme}
+      onChange={handleThemeChange}
+      className="absolute top-0 left-0 z-10 h-full w-full cursor-pointer text-gray-900 opacity-0 dark:bg-gray-700 dark:text-gray-50"
+    >
+      <option value="system">System</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+    </select>
+  </div>
+);

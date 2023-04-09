@@ -9,13 +9,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      transitionTimingFunction: {
+        'ease-in-out': 'cubic-bezier(0.5, 0.25, 0, 1)',
+      },
       fontFamily: {
         sans: [
-          'Inter',
+          'var(--font-sans)',
           {
             fontFeatureSettings: '"cv02","cv03","cv04","cv11"',
           },
         ],
+        mono: ['var(--font-mono)'],
       },
       backgroundImage: {
         pattern: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23e5e7eb'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e ")`,
