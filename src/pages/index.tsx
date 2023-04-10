@@ -49,14 +49,22 @@ export default function Home() {
           <div className="flex flex-col-reverse items-start gap-8 lg:flex-row">
             <div className="w-full space-y-8 lg:w-2/3">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                quaerat nihil magnam inventore harum, dolore tenetur. Illo error
-                nisi excepturi eos ducimus. Debitis, accusamus necessitatibus
-                nemo suscipit culpa assumenda tempore? Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Vero, aliquid quidem quae
-                placeat dignissimos aliquam? Quisquam, quod. Quisquam, quod quae
-                quidem, voluptate. Quisquam, quod quae quidem, voluptate.
-                Quisquam, quod quae quidem, voluptate.
+                Hello there 👋, I am Mohammad Shahanwaz, a software developer
+                based in Delhi, currently working at{' '}
+                <Link
+                  href="https://www.bosscoderacademy.com/"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-indigo-500 hover:text-indigo-600 hover:underline hover:underline-offset-4 dark:text-indigo-400 dark:hover:text-indigo-500"
+                >
+                  Bosscoder Academy
+                </Link>{' '}
+                as a Frontend Intern. I am mostly experienced in frontend web
+                development and a bit in designing. I like to make friendly and
+                user-centric UIs for the projects I work on and then make them
+                come to life with the help of code. Along with that, I also love
+                to do competitive programming and giving online contests to keep
+                my logical skills sharp.
               </p>
               <Link
                 href="https://drive.google.com/uc?id=1b9qWEM1gYSLXMobeuvu9Jnq6YhRDwX7P&export=download"
@@ -79,7 +87,7 @@ export default function Home() {
                   transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
                   className="aspect-video w-full rounded-lg object-cover md:aspect-video lg:aspect-square lg:max-h-[248px]"
                   src="https://images.pexels.com/photos/1366630/pexels-photo-1366630.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  alt="my pic"
+                  alt="Mohammad Shahanwaz"
                 />
               </div>
             </div>
@@ -89,8 +97,8 @@ export default function Home() {
           <div className="wrapper space-y-3 px-4">
             <h3>Skills</h3>
             <p>
-              In the course of my professional journey, I have utilized various
-              tools and technologies.
+              I have worked with a variety of technologies and tools in my 2+ yr
+              of professional journey. Here are some of them.
             </p>
           </div>
           <div
@@ -105,8 +113,7 @@ export default function Home() {
           <div className="space-y-3 px-4">
             <h3>Little Gallery</h3>
             <p className="text-lg">
-              In the course of my professional journey, I have utilized various
-              tools and technologies.
+              Here are some of my favorite shots that I have taken.
             </p>
           </div>
           <div className="space-border overflow-hidden">
