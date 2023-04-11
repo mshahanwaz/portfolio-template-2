@@ -56,7 +56,7 @@ const TIMELINE = [
   },
 ];
 
-const SIZE = 40;
+const SIZE = 50;
 
 export default function Timeline() {
   return (
@@ -74,7 +74,7 @@ export default function Timeline() {
         }}
       >
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
-          <h1>Timeline</h1>
+          <h1 className="text-center">Timeline</h1>
           <div className="relative">
             <div className="flex">
               <div style={{ width: `${SIZE}%` }} />

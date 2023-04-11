@@ -41,49 +41,24 @@ export default function About() {
           </div>
           <div className="space-y-8">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam
-              sequi ullam, ducimus ipsum amet commodi, adipisci ab nobis minima
-              ut? Ipsa possimus aliquam explicabo exercitationem error
-              laudantium, aliquid quisquam quis recusandae repellendus eaque
-              obcaecati culpa, ipsum velit tenetur blanditiis maxime facere
-              placeat harum incidunt accusantium, perspiciatis molestiae
-              nesciunt assumenda. Quidem iste provident eveniet inventore
-              beatae! Ipsam necessitatibus sunt, natus earum odit a labore
-              debitis iure qui ad sapiente facilis. Nihil officiis mollitia
-              aspernatur ad repellendus enim ipsam beatae, doloribus quibusdam
-              provident distinctio nam illum reiciendis dolorum voluptas minima
-              aperiam. Magni, velit!
+              Hi there 👋, I am{' '}
+              <strong className="font-semibold">Mohammad Shahanwaz</strong>. I
+              am a full-stack web developer based in Delhi who is passionate
+              about building exceptional web experiences. Welcome to my personal
+              space. Here you will find my projects, blogs, and other stuff that
+              I am working on. I am a self-taught developer who loves to learn
+              new things and explore different technologies. I am currently
+              working as a full-stack developer at a startup. I am also a
+              freelance developer. I have worked on many projects and have
+              experience in different technologies. I am always open to new
+              opportunities and challenges. I am also a competitive programmer.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam
-              sequi ullam, ducimus ipsum amet commodi, adipisci ab nobis minima
-              ut? Ipsa possimus aliquam explicabo exercitationem error
-              laudantium, aliquid quisquam quis recusandae repellendus eaque
-              obcaecati culpa, ipsum velit tenetur blanditiis maxime facere
-              placeat harum incidunt accusantium, perspiciatis molestiae
-              nesciunt assumenda. Quidem iste provident eveniet inventore
-              beatae! Ipsam necessitatibus sunt, natus earum odit a labore
-              debitis iure qui ad sapiente facilis. Nihil officiis mollitia
-              aspernatur ad repellendus enim ipsam beatae, doloribus quibusdam
-              provident distinctio nam illum reiciendis dolorum voluptas minima
-              aperiam. Magni, velit!
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              quaerat eius dignissimos. Tenetur dolorum quia iusto nihil nam
-              sequi ullam, ducimus ipsum amet commodi, adipisci ab nobis minima
-              ut? Ipsa possimus aliquam explicabo exercitationem error
-              laudantium, aliquid quisquam quis recusandae repellendus eaque
-              obcaecati culpa, ipsum velit tenetur blanditiis maxime facere
-              placeat harum incidunt accusantium, perspiciatis molestiae
-              nesciunt assumenda. Quidem iste provident eveniet inventore
-              beatae! Ipsam necessitatibus sunt, natus earum odit a labore
-              debitis iure qui ad sapiente facilis. Nihil officiis mollitia
-              aspernatur ad repellendus enim ipsam beatae, doloribus quibusdam
-              provident distinctio nam illum reiciendis dolorum voluptas minima
-              aperiam. Magni, velit!
+              Here, I basically share my thoughts, ideas and experiments with
+              new technologies. I also write about my experiences and share my
+              learnings. I love to work on collaborative projects and I am
+              always open to new opportunities. If you have any project in mind
+              or want to collaborate, feel free to contact me 📥.
             </p>
           </div>
         </div>

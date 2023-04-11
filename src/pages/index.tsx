@@ -49,8 +49,9 @@ export default function Home() {
           <div className="flex flex-col-reverse items-start gap-8 lg:flex-row">
             <div className="w-full space-y-8 lg:w-2/3">
               <p>
-                Hello there 👋, I am Mohammad Shahanwaz, a software developer
-                based in Delhi, currently working at{' '}
+                Hello there 👋, I am{' '}
+                <strong className="font-semibold">Mohammad Shahanwaz</strong>, a
+                fullstack web developer based in Delhi, currently working at{' '}
                 <Link
                   href="https://www.bosscoderacademy.com/"
                   target="_blank"
@@ -63,8 +64,7 @@ export default function Home() {
                 development and a bit in designing. I like to make friendly and
                 user-centric UIs for the projects I work on and then make them
                 come to life with the help of code. Along with that, I also love
-                to do competitive programming and giving online contests to keep
-                my logical skills sharp.
+                to do competitive programming to keep my logical skills sharp.
               </p>
               <Link
                 href="https://drive.google.com/uc?id=1b9qWEM1gYSLXMobeuvu9Jnq6YhRDwX7P&export=download"
@@ -113,7 +113,8 @@ export default function Home() {
           <div className="space-y-3 px-4">
             <h3>Little Gallery</h3>
             <p className="text-lg">
-              Here are some of my favorite shots that I have taken.
+              I love to capture moments so here are some of my best shots from
+              my phone camera.
             </p>
           </div>
           <div className="space-border overflow-hidden">
