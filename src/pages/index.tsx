@@ -56,7 +56,7 @@ export default function Home() {
                   href="https://www.bosscoderacademy.com/"
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="text-indigo-500 hover:text-indigo-600 hover:underline hover:underline-offset-4 dark:text-indigo-400 dark:hover:text-indigo-500"
+                  className="font-medium text-indigo-600 hover:underline hover:underline-offset-4 dark:text-indigo-400"
                 >
                   Bosscoder Academy
                 </Link>{' '}

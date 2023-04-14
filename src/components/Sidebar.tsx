@@ -219,9 +219,7 @@ export default function Sidebar({ hidden, setHidden }: any) {
           x: isMobile ? (hidden ? '-100%' : 0) : 0,
           transition: { duration: 0.2, ease: 'easeOut' },
         }}
-        className={cn(
-          'fixed top-0 left-0 z-30 flex h-screen flex-col border-r border-gray-200 bg-gray-100 text-gray-500 backdrop-blur-md dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:sticky',
-        )}
+        className="fixed top-0 left-0 z-40 flex h-screen flex-col border-r border-gray-200 bg-gray-100 text-gray-500 backdrop-blur-md dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:sticky"
       >
         <motion.nav
           animate={{
@@ -337,7 +335,7 @@ export default function Sidebar({ hidden, setHidden }: any) {
           transition: { duration: 0.3, ease: 'linear' },
         }}
         className={cn(
-          'fixed top-0 right-0 z-20 h-full w-full bg-black/50 md:hidden',
+          'fixed top-0 right-0 z-30 h-full w-full bg-gray-900/50 md:hidden',
           hidden && 'hidden',
         )}
         onClick={handleOpen}

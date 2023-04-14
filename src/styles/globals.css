@@ -38,4 +38,7 @@
   p {
     @apply text-gray-600 dark:text-gray-300;
   }
+  strong {
+    @apply text-gray-900 dark:text-gray-200;
+  }
 }
