@@ -16,7 +16,7 @@ export default function photography() {
   return (
     <>
       <Head>
-        <title>M. Shahanwaz - Photography</title>
+        <title>Photography - M. Shahanwaz</title>
       </Head>
       <motion.div
         className="space-y-20"

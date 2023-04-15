@@ -38,7 +38,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>M. Shahanwaz - Projects</title>
+        <title>Projects - M. Shahanwaz</title>
         <meta name="description" content="Professional portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -76,9 +76,7 @@ export default function Projects() {
                         {project.title}
                       </Link>
                     </h2>
-                    <p className="text-base lg:leading-[1.3rem] lg:line-clamp-3">
-                      {project.brief}
-                    </p>
+                    <p className="text-base">{project.brief}</p>
                     <div className="mt-auto flex flex-wrap gap-2 text-sm font-medium">
                       <Link
                         href={project.link}

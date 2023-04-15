@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>M. Shahanwaz - About</title>
+        <title>About - M. Shahanwaz</title>
         <meta name="description" content="Professional portfolio website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
