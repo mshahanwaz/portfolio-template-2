@@ -1,6 +1,6 @@
-import cn from '@/core/utils/cn';
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import cn from '@/core/utils/cn';
 
 export default function Button({ children, className }: Props) {
   return (

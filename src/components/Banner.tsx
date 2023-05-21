@@ -1,80 +1,82 @@
 /* eslint-disable @next/next/no-img-element */
-import github from '@/assets/svgs/logos/github.svg';
-import gitlab from '@/assets/svgs/logos/gitlab.svg';
-import vscode from '@/assets/svgs/logos/vscode.svg';
-import ts from '@/assets/svgs/logos/ts.svg';
-import redux from '@/assets/svgs/logos/redux.svg';
-import recoil from '@/assets/svgs/logos/recoil.svg';
-import nodejs from '@/assets/svgs/logos/nodejs.svg';
-import mongodb from '@/assets/svgs/logos/mongodb.svg';
-import firebase from '@/assets/svgs/logos/firebase.svg';
-import express from '@/assets/svgs/logos/express.svg';
-import tailwind from '@/assets/svgs/logos/tailwind.svg';
-import nextjs from '@/assets/svgs/logos/nextjs.svg';
-import reactjs from '@/assets/svgs/logos/reactjs.svg';
-import mui from '@/assets/svgs/logos/mui.svg';
+import {
+  ts,
+  redux,
+  recoil,
+  nodejs,
+  mongodb,
+  firebase,
+  express,
+  tailwind,
+  nextjs,
+  reactjs,
+  mui,
+  github,
+  gitlab,
+  vscode,
+} from '@/assets/svgs/logos';
 import cn from '@/core/utils/cn';
 
-const TECHS = [
+const TECHNOLOGIES = [
   {
     src: reactjs.src,
-    alt: 'ReactJS',
+    name: 'ReactJS',
   },
   {
     src: nextjs.src,
-    alt: 'NextJS',
+    name: 'NextJS',
     invert: true,
   },
   {
     src: ts.src,
-    alt: 'TypeScript',
+    name: 'TypeScript',
   },
   {
     src: tailwind.src,
-    alt: 'TailwindCSS',
+    name: 'TailwindCSS',
   },
   {
     src: mui.src,
-    alt: 'Material UI',
+    name: 'Material UI',
   },
 
   {
     src: redux.src,
-    alt: 'Redux',
+    name: 'Redux',
   },
   {
     src: recoil.src,
-    alt: 'Recoil',
+    name: 'Recoil',
     invert: true,
   },
   {
     src: nodejs.src,
-    alt: 'NodeJS',
+    name: 'NodeJS',
   },
   {
     src: express.src,
-    alt: 'ExpressJS',
+    name: 'ExpressJS',
   },
   {
     src: mongodb.src,
-    alt: 'MongoDB',
+    name: 'MongoDB',
   },
   {
     src: firebase.src,
-    alt: 'Firebase',
+    name: 'Firebase',
   },
   {
     src: github.src,
-    alt: 'GitHub',
+    name: 'GitHub',
     invert: true,
   },
   {
     src: gitlab.src,
-    alt: 'GitLab',
+    name: 'GitLab',
   },
   {
     src: vscode.src,
-    alt: 'VSCode',
+    name: 'VSCode',
   },
 ];
 
@@ -82,11 +84,11 @@ export default function Banner() {
   return (
     <div className="group relative h-[60px] overflow-hidden">
       <div className="h-inherit group-hover:pause absolute top-0 left-0 animate-banner whitespace-nowrap">
-        {[...TECHS, ...TECHS].map((tech, index) => (
+        {[...TECHNOLOGIES, ...TECHNOLOGIES].map((tech, index) => (
           <div
             key={index}
             className="h-inherit inline-flex aspect-square min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50"
-            title={tech.alt}
+            title={tech.name}
           >
             <img
               className={cn(
@@ -94,9 +96,9 @@ export default function Banner() {
                 tech.invert && 'dark:invert',
               )}
               src={tech.src}
-              alt={tech.alt}
+              alt={tech.name}
             />
-            <span className="text-lg font-medium">{tech.alt}</span>
+            <span className="text-lg font-medium">{tech.name}</span>
           </div>
         ))}
       </div>

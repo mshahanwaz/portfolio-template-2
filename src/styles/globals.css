@@ -18,9 +18,6 @@
   .space-border {
     @apply rounded-[2rem] border border-gray-200 p-2  dark:border-gray-700;
   }
-  /* .hover-scale {
-    @apply transition-transform duration-1000 ease-in-out hover:scale-125;
-  } */
 }
 
 @layer base {

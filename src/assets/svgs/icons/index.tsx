@@ -13,6 +13,7 @@ import ChevronDownIcon from '@/assets/svgs/icons/ChevronDownIcon';
 import InstagramIcon from '@/assets/svgs/icons/InstagramIcon';
 import GitHubIcon from '@/assets/svgs/icons/GitHubIcon';
 import ExternalIcon from '@/assets/svgs/icons/ExternalIcon';
+import DownloadIcon from '@/assets/svgs/icons/DownloadIcon';
 
 export {
   HomeIcon,
@@ -30,4 +31,5 @@ export {
   InstagramIcon,
   GitHubIcon,
   ExternalIcon,
+  DownloadIcon,
 };
