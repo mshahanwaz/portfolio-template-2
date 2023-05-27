@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import nextjs from '@/assets/svgs/logos/nextjs.svg';
-import tailwind from '@/assets/svgs/logos/tailwind.svg';
+import nextjs from '@/assets/vectors/logos/nextjs.svg';
+import tailwind from '@/assets/vectors/logos/tailwind.svg';
 
 export default function Footer() {
   return (

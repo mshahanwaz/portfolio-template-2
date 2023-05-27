@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+import example from '@/assets/images/example.png';
 
 export default function About() {
   return (
@@ -32,7 +33,7 @@ export default function About() {
                       whileHover={{ scale: 1.25 }}
                       transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
                       className="h-full w-full object-cover"
-                      src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?cs=srgb&dl=pexels-pixabay-268533.jpg&fm=jpg"
+                      src={example.src}
                       alt="my photo"
                     />
                   </div>

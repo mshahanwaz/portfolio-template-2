@@ -1,20 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
-import { GitHubIcon } from '@/assets/svgs/icons';
-import ArrowUpRightIcon from '@/assets/svgs/icons/ArrowUpRightIcon';
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+import { GitHubIcon } from '@/assets/vectors/icons';
+import ArrowUpRightIcon from '@/assets/vectors/icons/ArrowUpRightIcon';
+import example from '@/assets/images/example.png';
 
 const PROJECTS = [
   {
     title: 'Noto App',
     description:
       'A simple and minimal notes + todo taking application with CRUD functionality along with custom key bindings.',
-    image: [
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-    ],
+    image: [example.src, example.src, example.src],
     link: 'https://noto-app.vercel.app/',
     github: 'https://github.com/mshahanwaz/noto-app',
   },
@@ -22,11 +19,7 @@ const PROJECTS = [
     title: 'Portfolio v4',
     description:
       'Newest iteration of my simple, aesthetic and minimal personal portfolio website to showcase my work and experience.',
-    image: [
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-    ],
+    image: [example.src, example.src, example.src],
     link: 'https://mshahanwaz.vercel.app/',
     github: 'https://github.com/mshahanwaz/portfolio-v4',
   },
@@ -34,11 +27,7 @@ const PROJECTS = [
     title: 'Amazon Clone',
     description:
       'Fully functional Amazon website clone with user authentication, payment gateway, and basket functionality.',
-    image: [
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-    ],
+    image: [example.src, example.src, example.src],
     link: 'https://amazon-clone-mshahanwaz.vercel.app/',
     github: 'https://github.com/mshahanwaz/amazon-build',
   },
@@ -46,11 +35,7 @@ const PROJECTS = [
     title: 'Image Processing in C++',
     description:
       'A terminal based image processing tool written in C++ to perform various image processing operations on .bmp file format.',
-    image: [
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-      'https://images.unsplash.com/photo-1508919801845-fc2ae1bc2a28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1nfGVufDB8fDB8fA%3D%3D&w=1000&q=80',
-    ],
+    image: [example.src, example.src, example.src],
     github: 'https://github.com/mshahanwaz/ip_cpp_2022',
   },
 ];

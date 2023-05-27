@@ -14,7 +14,7 @@ import {
   github,
   gitlab,
   vscode,
-} from '@/assets/svgs/logos';
+} from '@/assets/vectors/logos';
 import cn from '@/core/utils/cn';
 
 const TECHNOLOGIES = [

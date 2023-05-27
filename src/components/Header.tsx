@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import MenuIcon from '@/assets/svgs/icons/MenuIcon';
+import MenuIcon from '@/assets/vectors/icons/MenuIcon';
 import Link from 'next/link';
 
 export default function Header({ hidden, setHidden }: any) {

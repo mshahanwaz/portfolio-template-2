@@ -12,17 +12,17 @@ import {
   PenIcon,
   SunIcon,
   UserIcon,
-} from '@/assets/svgs/icons';
-import ChevronRightIcon from '@/assets/svgs/icons/ChevronRightIcon';
-import ChevronDownIcon from '@/assets/svgs/icons/ChevronDownIcon';
+} from '@/assets/vectors/icons';
+import ChevronRightIcon from '@/assets/vectors/icons/ChevronRightIcon';
+import ChevronDownIcon from '@/assets/vectors/icons/ChevronDownIcon';
 import { motion } from 'framer-motion';
-import GitHubIcon from '@/assets/svgs/icons/GitHubIcon';
-import LinkedInIcon from '@/assets/svgs/icons/LinkedInIcon';
-import InstagramIcon from '@/assets/svgs/icons/InstagramIcon';
-import ArrowUpRightIcon from '@/assets/svgs/icons/ArrowUpRightIcon';
+import GitHubIcon from '@/assets/vectors/icons/GitHubIcon';
+import LinkedInIcon from '@/assets/vectors/icons/LinkedInIcon';
+import InstagramIcon from '@/assets/vectors/icons/InstagramIcon';
+import ArrowUpRightIcon from '@/assets/vectors/icons/ArrowUpRightIcon';
 import { capitalize } from '@/core/utils/string';
-import MoonIcon from '@/assets/svgs/icons/MoonIcon';
-import MonitorIcon from '@/assets/svgs/icons/MonitorIcon';
+import MoonIcon from '@/assets/vectors/icons/MoonIcon';
+import MonitorIcon from '@/assets/vectors/icons/MonitorIcon';
 
 type Theme = 'light' | 'dark' | 'system';
 
