@@ -1,8 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import Link from 'next/link';
-import { GitHubIcon } from '@/assets/vectors/icons';
 import ArrowUpRightIcon from '@/assets/vectors/icons/ArrowUpRightIcon';
 import example from '@/assets/images/example.png';
 import Meta from '@/components/Meta';
@@ -47,12 +45,12 @@ export default function Projects() {
     <>
       <Meta title="Projects - M. Shahanwaz" />
 
-      <Animate>
+      <Animate className="space-y-20">
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
           <h1>Projects</h1>
           <div className="space-y-12 text-gray-600 dark:text-gray-300">
-            {PROJECTS.map((project, projectIndex) => (
-              <ProjectCard key={projectIndex} {...{ project, projectIndex }} />
+            {PROJECTS.map((project, i) => (
+              <ProjectCard key={i} project={project} />
             ))}
           </div>
         </div>
@@ -61,12 +59,9 @@ export default function Projects() {
   );
 }
 
-function ProjectCard({ projectIndex, project }: any) {
+function ProjectCard({ project }: any) {
   return (
-    <div
-      key={projectIndex}
-      className="space-border overflow-hidden rounded-3xl"
-    >
+    <div className="space-border overflow-hidden rounded-3xl">
       <div className="flex flex-wrap gap-2 overflow-hidden rounded-3xl lg:flex-nowrap">
         <div className="w-full overflow-hidden rounded-lg lg:max-w-sm">
           <motion.img

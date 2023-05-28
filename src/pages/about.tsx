@@ -3,20 +3,14 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import example from '@/assets/images/example.png';
 import Meta from '@/components/Meta';
+import Animate from '@/components/Animate';
 
 export default function About() {
   return (
     <>
       <Meta title="About - M. Shahanwaz" />
-      <motion.div
-        className="space-y-20"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
-        }}
-      >
+
+      <Animate className="space-y-20">
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
           <h1>About</h1>
           <div className="space-border overflow-hidden">
@@ -60,7 +54,7 @@ export default function About() {
             </p>
           </div>
         </div>
-      </motion.div>
+      </Animate>
     </>
   );
 }

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import cn from '@/core/utils/cn';
 import Meta from '@/components/Meta';
+import Animate from '@/components/Animate';
 
 const TIMELINE = [
   {
@@ -64,15 +65,7 @@ export default function Timeline() {
     <>
       <Meta title="Photography - M. Shahanwaz" />
 
-      <motion.div
-        className="space-y-20"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
-        }}
-      >
+      <Animate className="space-y-20">
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
           <h1 className="text-center">Timeline</h1>
           <div className="relative">
@@ -143,7 +136,7 @@ export default function Timeline() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </Animate>
     </>
   );
 }

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Head from 'next/head';
 import example from '@/assets/images/example.png';
 import Meta from '@/components/Meta';
+import Animate from '@/components/Animate';
 
 const IMAGES = Array(9).fill(example.src);
 
@@ -11,15 +12,7 @@ export default function photography() {
     <>
       <Meta title="Photography - M. Shahanwaz" />
 
-      <motion.div
-        className="space-y-20"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
-        }}
-      >
+      <Animate className="space-y-20">
         <div className="flex flex-col gap-12 px-4 py-16">
           <h1 className="wrapper">Photography</h1>
           <div className="space-border overflow-hidden">
@@ -87,7 +80,7 @@ export default function photography() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </Animate>
     </>
   );
 }

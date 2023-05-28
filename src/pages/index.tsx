@@ -7,6 +7,7 @@ import cn from '@/core/utils/cn';
 import { DownloadIcon } from '@/assets/vectors/icons';
 import example from '@/assets/images/example.png';
 import Meta from '@/components/Meta';
+import Animate from '@/components/Animate';
 
 const GRID_SPANS = [
   'row-start-1 row-end-5 col-start-1 col-end-6',
@@ -21,15 +22,7 @@ export default function Home() {
     <>
       <Meta />
 
-      <motion.div
-        className="space-y-20"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
-        }}
-      >
+      <Animate className="space-y-20">
         <div className="wrapper flex flex-col gap-12 px-4 py-16">
           <h1>M. Shahanwaz</h1>
           <div className="flex flex-col-reverse items-start gap-8 lg:flex-row">
@@ -121,7 +114,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.div>
+      </Animate>
     </>
   );
 }
