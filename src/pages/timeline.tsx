@@ -1,5 +1,3 @@
-import Head from 'next/head';
-import { motion } from 'framer-motion';
 import cn from '@/core/utils/cn';
 import Meta from '@/components/Meta';
 import Animate from '@/components/Animate';
@@ -66,7 +64,7 @@ export default function Timeline() {
       <Meta title="Photography - M. Shahanwaz" />
 
       <Animate className="space-y-20">
-        <div className="wrapper flex flex-col gap-12 px-4 py-16">
+        <div className="mx-auto flex w-full max-w-4xl flex-col gap-12 px-4 py-16">
           <h1 className="text-center">Timeline</h1>
           <div className="relative">
             <div className="flex">

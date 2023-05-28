@@ -21,7 +21,7 @@ import { SelectTheme } from './SelectTheme';
 
 type Theme = 'light' | 'dark' | 'system';
 
-export default function Sidebar({ hidden, setHidden }: any) {
+export default function Sidebar({ hidden, setHidden }: Props) {
   const { pathname } = useRouter();
 
   const NAV_LINKS = [
@@ -163,6 +163,21 @@ export default function Sidebar({ hidden, setHidden }: any) {
 
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          setIsOpen(false);
+        }
+      });
+    }
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('keydown', () => {});
+      }
+    };
+  }, []);
+
+  React.useEffect(() => {
+    if (typeof window !== 'undefined') {
       const localTheme = window.localStorage.getItem('theme');
       if (localTheme === 'dark') {
         setTheme('dark');
@@ -185,22 +200,6 @@ export default function Sidebar({ hidden, setHidden }: any) {
         window
           .matchMedia('(prefers-color-scheme: dark)')
           .removeEventListener('change', fetchSystemTheme);
-      }
-    };
-  }, []);
-
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          if (isMobile) setHidden(true);
-          else setIsOpen(false);
-        }
-      });
-    }
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('keydown', () => {});
       }
     };
   }, []);
@@ -334,3 +333,8 @@ export default function Sidebar({ hidden, setHidden }: any) {
     </>
   );
 }
+
+type Props = {
+  hidden: boolean;
+  setHidden: React.Dispatch<React.SetStateAction<boolean>>;
+};

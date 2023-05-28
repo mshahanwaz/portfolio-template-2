@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
 import { motion } from 'framer-motion';
 import example from '@/assets/images/example.png';
 import Meta from '@/components/Meta';
@@ -11,7 +10,7 @@ export default function About() {
       <Meta title="About - M. Shahanwaz" />
 
       <Animate className="space-y-20">
-        <div className="wrapper flex flex-col gap-12 px-4 py-16">
+        <div className="mx-auto flex w-full max-w-4xl flex-col gap-12 px-4 py-16">
           <h1>About</h1>
           <div className="space-border overflow-hidden">
             <div className="flex flex-wrap gap-2 overflow-hidden rounded-3xl sm:flex-nowrap">
@@ -33,10 +32,9 @@ export default function About() {
           </div>
           <div className="space-y-8">
             <p>
-              Hi there 👋, I am{' '}
-              <strong className="font-semibold">Mohammad Shahanwaz</strong>. I
-              am a full-stack web developer based in Delhi who is passionate
-              about building exceptional web experiences. Welcome to my personal
+              Hi there 👋, I am <strong>Mohammad Shahanwaz</strong>. I am a
+              full-stack web developer based in Delhi who is passionate about
+              building exceptional web experiences. Welcome to my personal
               space. Here you will find my projects, blogs, and other stuff that
               I am working on. I am a self-taught developer who loves to learn
               new things and explore different technologies. I am currently

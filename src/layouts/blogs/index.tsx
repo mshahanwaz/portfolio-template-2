@@ -64,7 +64,7 @@ export default function Blogs() {
           transition: { duration: 0.3, delay: 0.2, ease: 'easeOut' },
         }}
       >
-        <div className="wrapper flex flex-col gap-12 px-4 py-16">
+        <div className="mx-auto w-full max-w-4xl">
           <h1 className="text-9xl">
             <span>Blogs</span>
           </h1>

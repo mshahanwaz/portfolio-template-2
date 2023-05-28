@@ -12,9 +12,6 @@
   .h-inherit {
     height: inherit;
   }
-  .wrapper {
-    @apply mx-auto w-full max-w-4xl;
-  }
   .space-border {
     @apply rounded-[2rem] border border-gray-200 p-2  dark:border-gray-700;
   }
@@ -36,6 +33,6 @@
     @apply text-gray-600 dark:text-gray-300;
   }
   strong {
-    @apply text-gray-900 dark:text-gray-200;
+    @apply font-medium text-gray-900 dark:text-gray-200;
   }
 }

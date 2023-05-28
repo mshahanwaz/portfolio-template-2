@@ -46,7 +46,7 @@ export default function Projects() {
       <Meta title="Projects - M. Shahanwaz" />
 
       <Animate className="space-y-20">
-        <div className="wrapper flex flex-col gap-12 px-4 py-16">
+        <div className="mx-auto flex w-full max-w-4xl flex-col gap-12 px-4 py-16">
           <h1>Projects</h1>
           <div className="space-y-12 text-gray-600 dark:text-gray-300">
             {PROJECTS.map((project, i) => (

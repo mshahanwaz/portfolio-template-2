@@ -23,18 +23,16 @@ export default function Home() {
       <Meta />
 
       <Animate className="space-y-20">
-        <div className="wrapper flex flex-col gap-12 px-4 py-16">
+        <div className="mx-auto flex w-full max-w-4xl flex-col gap-12 px-4 py-16">
           <h1>M. Shahanwaz</h1>
           <div className="flex flex-col-reverse items-start gap-8 lg:flex-row">
             <div className="w-full space-y-8 lg:w-2/3">
               <p>
-                Hello there 👋, I am{' '}
-                <strong className="font-semibold">Mohammad Shahanwaz</strong>, a
+                Hello there 👋, I am <strong>Mohammad Shahanwaz</strong>, a
                 fullstack web developer based in Delhi, currently working at{' '}
                 <Link
                   href="https://www.bosscoderacademy.com/"
                   target="_blank"
-                  rel="noreferrer noopener"
                   className="font-medium text-indigo-600 hover:underline hover:underline-offset-4 dark:text-indigo-400"
                 >
                   Bosscoder Academy
@@ -63,7 +61,7 @@ export default function Home() {
                   onContextMenu={(e) => e.preventDefault()}
                   whileHover={{ scale: 1.25 }}
                   transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
-                  className="aspect-video w-full rounded-lg object-cover md:aspect-video lg:aspect-square lg:max-h-[248px]"
+                  className="aspect-square w-full rounded-lg object-cover lg:max-h-[248px]"
                   src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
                   alt="Mohammad Shahanwaz"
                 />
@@ -72,7 +70,7 @@ export default function Home() {
           </div>
         </div>
         <div className="space-y-16 py-16">
-          <div className="wrapper space-y-3 px-4">
+          <div className="mx-auto w-full max-w-4xl space-y-3 px-4">
             <h3>Skills</h3>
             <p>
               I have worked with a variety of technologies and tools in my 2+ yr
@@ -83,7 +81,7 @@ export default function Home() {
             <Banner />
           </div>
         </div>
-        <div className="wrapper space-y-16 px-4 py-16">
+        <div className="mx-auto w-full max-w-4xl space-y-16 px-4 py-16">
           <div className="space-y-3 px-4">
             <h3>Mini Gallery</h3>
             <p className="text-lg">
