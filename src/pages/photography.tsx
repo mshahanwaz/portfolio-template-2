@@ -2,15 +2,15 @@
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import example from '@/assets/images/example.png';
+import Meta from '@/components/Meta';
 
 const IMAGES = Array(9).fill(example.src);
 
 export default function photography() {
   return (
     <>
-      <Head>
-        <title>Photography - M. Shahanwaz</title>
-      </Head>
+      <Meta title="Photography - M. Shahanwaz" />
+
       <motion.div
         className="space-y-20"
         initial={{ opacity: 0, y: 10 }}

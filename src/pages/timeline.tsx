@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import cn from '@/core/utils/cn';
+import Meta from '@/components/Meta';
 
 const TIMELINE = [
   {
@@ -61,9 +62,8 @@ const SIZE = 50;
 export default function Timeline() {
   return (
     <>
-      <Head>
-        <title>Timeline - M. Shahanwaz</title>
-      </Head>
+      <Meta title="Photography - M. Shahanwaz" />
+
       <motion.div
         className="space-y-20"
         initial={{ opacity: 0, y: 10 }}

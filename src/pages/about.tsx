@@ -2,15 +2,12 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import example from '@/assets/images/example.png';
+import Meta from '@/components/Meta';
 
 export default function About() {
   return (
     <>
-      <Head>
-        <title>About - M. Shahanwaz</title>
-        <meta name="description" content="Professional portfolio website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <Meta title="About - M. Shahanwaz" />
       <motion.div
         className="space-y-20"
         initial={{ opacity: 0, y: 10 }}

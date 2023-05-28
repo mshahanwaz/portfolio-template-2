@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { GitHubIcon } from '@/assets/vectors/icons';
 import ArrowUpRightIcon from '@/assets/vectors/icons/ArrowUpRightIcon';
 import example from '@/assets/images/example.png';
+import Meta from '@/components/Meta';
 
 const PROJECTS = [
   {
@@ -43,11 +44,8 @@ const PROJECTS = [
 export default function Projects() {
   return (
     <>
-      <Head>
-        <title>Projects - M. Shahanwaz</title>
-        <meta name="description" content="Professional portfolio website" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </Head>
+      <Meta title="Projects - M. Shahanwaz" />
+
       <motion.div
         className="space-y-20"
         initial={{ opacity: 0, y: 10 }}

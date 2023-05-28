@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Banner from '@/components/Banner';
@@ -7,6 +6,7 @@ import Button from '@/components/Button';
 import cn from '@/core/utils/cn';
 import { DownloadIcon } from '@/assets/vectors/icons';
 import example from '@/assets/images/example.png';
+import Meta from '@/components/Meta';
 
 const GRID_SPANS = [
   'row-start-1 row-end-5 col-start-1 col-end-6',
@@ -19,15 +19,8 @@ const GRID_SPANS = [
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>M. Shahanwaz</title>
-        <meta
-          name="description"
-          content="✨ Personal portfolio website built with Next.js"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Meta />
+
       <motion.div
         className="space-y-20"
         initial={{ opacity: 0, y: 10 }}
