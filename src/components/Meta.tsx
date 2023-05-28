@@ -34,7 +34,10 @@ export default function Meta({ title = 'M. Shahanwaz' }: Props) {
         property="og:description"
         content="✨ Personal portfolio website built with Next.js"
       />
-      <meta property="og:image" content="/images/og.png" />
+      <meta
+        property="og:image"
+        content="https://shahanwaz.vercel.app/images/og.png"
+      />
       <meta property="og:image:alt" content="M. Shahanwaz" />
       <meta property="og:site_name" content="M. Shahanwaz" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -45,7 +48,10 @@ export default function Meta({ title = 'M. Shahanwaz' }: Props) {
         name="twitter:description"
         content="✨ Personal portfolio website built with Next.js"
       />
-      <meta name="twitter:image" content="/images/og.png" />
+      <meta
+        name="twitter:image"
+        content="https://shahanwaz.vercel.app/images/og.png"
+      />
       <meta name="twitter:image:alt" content="M. Shahanwaz" />
       <meta name="twitter:domain" content="shahanwaz.vercel.app" />
       <link rel="canonical" href="https://shahanwaz.vercel.app/" />
