@@ -18,6 +18,7 @@ import LinkedInIcon from '@/assets/vectors/icons/LinkedInIcon';
 import InstagramIcon from '@/assets/vectors/icons/InstagramIcon';
 import ArrowUpRightIcon from '@/assets/vectors/icons/ArrowUpRightIcon';
 import { SelectTheme } from './SelectTheme';
+import TwitterIcon from '@/assets/vectors/icons/TwitterIcon';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -43,12 +44,12 @@ export default function Sidebar({ hidden, setHidden }: Props) {
       icon: <CPUIcon className="h-4 w-4" />,
       active: pathname.includes('/projects'),
     },
-    {
-      name: 'Timeline',
-      href: '/timeline',
-      icon: <LogIcon className="h-4 w-4" />,
-      active: pathname.includes('/timeline'),
-    },
+    // {
+    //   name: 'Timeline',
+    //   href: '/timeline',
+    //   icon: <LogIcon className="h-4 w-4" />,
+    //   active: pathname.includes('/timeline'),
+    // },
     // {
     //   name: 'Blogs',
     //   href: '/blogs',
@@ -74,6 +75,12 @@ export default function Sidebar({ hidden, setHidden }: Props) {
       name: 'LinkedIn',
       href: 'https://linkedin.com/in/mshahanwaz',
       icon: <LinkedInIcon className="h-4 w-4" />,
+      external: true,
+    },
+    {
+      name: 'Twitter',
+      href: 'https://twitter.com/imshahanwaz',
+      icon: <TwitterIcon className="h-4 w-4" />,
       external: true,
     },
     {
