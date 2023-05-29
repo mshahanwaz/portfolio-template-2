@@ -1,7 +1,7 @@
-export default function ReactIcon(props: any) {
+export default function ReactIcon({ className }: Props) {
   return (
     <svg
-      className={props.className}
+      className={className}
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -14,3 +14,7 @@ export default function ReactIcon(props: any) {
     </svg>
   );
 }
+
+type Props = {
+  className?: string;
+};

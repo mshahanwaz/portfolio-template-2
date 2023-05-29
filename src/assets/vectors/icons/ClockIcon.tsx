@@ -1,7 +1,7 @@
-export default function ClockIcon(props: any) {
+export default function ClockIcon({ className }: Props) {
   return (
     <svg
-      className={props.className}
+      className={className}
       viewBox="0 0 15 15"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -15,3 +15,7 @@ export default function ClockIcon(props: any) {
     </svg>
   );
 }
+
+type Props = {
+  className?: string;
+};

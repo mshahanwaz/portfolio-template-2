@@ -1,7 +1,7 @@
-export default function CPUIcon(props: { className?: string }) {
+export default function CPUIcon({ className }: Props) {
   return (
     <svg
-      className={props.className}
+      className={className}
       viewBox="0 0 24 24"
       stroke="currentColor"
       strokeWidth="2"
@@ -22,3 +22,7 @@ export default function CPUIcon(props: { className?: string }) {
     </svg>
   );
 }
+
+type Props = {
+  className?: string;
+};

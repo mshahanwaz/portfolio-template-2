@@ -1,7 +1,7 @@
-export default function HomeIcon(props: { className?: string }) {
+export default function HomeIcon({ className }: Props) {
   return (
     <svg
-      className={props.className}
+      className={className}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
@@ -15,3 +15,7 @@ export default function HomeIcon(props: { className?: string }) {
     </svg>
   );
 }
+
+type Props = {
+  className?: string;
+};
