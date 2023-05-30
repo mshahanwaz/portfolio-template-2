@@ -13,6 +13,10 @@ const inter = localFont({
 export default function MainLayout({ children }: Props) {
   const [hide, setHide] = React.useState<boolean>(true);
 
+  const onToggle = () => {
+    setHide(!hide);
+  };
+
   return (
     <div
       className={cn(
@@ -22,7 +26,7 @@ export default function MainLayout({ children }: Props) {
     >
       <Sidebar hidden={hide} setHidden={setHide} />
       <div className="w-full">
-        <Header hidden={hide} setHidden={setHide} />
+        <Header toggle={onToggle} />
         <main className="text-lg">{children}</main>
         <Footer />
       </div>

@@ -157,13 +157,9 @@ export default function Sidebar({ hidden, setHidden }: Props) {
 
     return () => {
       if (typeof window !== 'undefined') {
-        window.removeEventListener('resize', () => {
-          if (window.innerWidth < 768) {
-            setIsMobile(true);
-          } else {
-            setIsMobile(false);
-          }
-        });
+        window.removeEventListener('resize', () =>
+          setIsMobile(window.innerWidth < 768),
+        );
       }
     };
   }, []);
@@ -186,12 +182,8 @@ export default function Sidebar({ hidden, setHidden }: Props) {
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
       const localTheme = window.localStorage.getItem('theme');
-      if (localTheme === 'dark') {
-        setTheme('dark');
-      } else if (localTheme === 'light') {
-        setTheme('light');
-      } else {
-        setTheme('system');
+      if (typeof localTheme === 'string') {
+        setTheme(localTheme as Theme);
       }
     }
 
@@ -227,16 +219,14 @@ export default function Sidebar({ hidden, setHidden }: Props) {
             width: isOpen ? 264 : 64,
             transition: { duration: 0.1, ease: 'easeOut' },
           }}
-          className={cn('flex flex-1 flex-col gap-2 ', 'p-3')}
+          className="flex flex-1 flex-col gap-2 p-3"
         >
           {NAV_LINKS.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              onClick={() => {
-                if (isMobile) setHidden(true);
-              }}
               title={link.name}
+              onClick={() => setHidden(isMobile)}
             >
               <motion.div
                 animate={{
@@ -318,7 +308,7 @@ export default function Sidebar({ hidden, setHidden }: Props) {
                 !isOpen && 'hidden',
               )}
             >
-              <span className="">Close</span>
+              <span>Close</span>
               <span className="text-xs font-semibold leading-4 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400">
                 ESC
               </span>
