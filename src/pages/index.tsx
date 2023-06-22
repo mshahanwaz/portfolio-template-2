@@ -1,13 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Banner from '@/components/Banner';
 import Button from '@/components/Button';
 import cn from '@/core/utils/cn';
 import { DownloadIcon } from '@/assets/vectors/icons';
-import example from '@/assets/images/example.png';
+import profile_pic from '@/assets/images/profile_pic.png';
 import Meta from '@/components/Meta';
 import Animate from '@/components/Animate';
+import rajasthan_1 from '@/assets/images/photography/rajasthan_1.jpg';
+import rajasthan_5 from '@/assets/images/photography/rajasthan_5.jpg';
+import delhi_1 from '@/assets/images/photography/delhi_1.jpg';
+import delhi_2 from '@/assets/images/photography/delhi_2.jpg';
+import goa_1 from '@/assets/images/photography/goa_1.jpg';
 
 const GRID_SPANS = [
   'row-start-1 row-end-5 col-start-1 col-end-6',
@@ -16,6 +21,8 @@ const GRID_SPANS = [
   'row-start-5 row-end-7 col-start-1 col-end-4',
   'row-start-5 row-end-7 col-start-4 col-end-8',
 ];
+
+const PHOTOS = [rajasthan_1, rajasthan_5, delhi_1, delhi_2, goa_1];
 
 export default function Home() {
   return (
@@ -37,11 +44,12 @@ export default function Home() {
                 >
                   Bosscoder Academy
                 </Link>{' '}
-                as a Frontend Intern. I am mostly experienced in frontend web
-                development and a bit in designing. I like to make friendly and
-                user-centric UIs for the projects I work on and then make them
-                come to life with the help of code. Along with that, I also love
-                to do competitive programming to keep my logical skills sharp.
+                as a full-time software developer. I am mostly experienced in
+                frontend web development and a bit in designing. I like to make
+                friendly and user-centric UIs for the projects I work on and
+                then make them come to life with some bunch of div&apos;s. Along
+                with that, I also love to do competitive programming to keep up
+                with my logical skills.
               </p>
               <Link
                 href="https://drive.google.com/uc?id=1b9qWEM1gYSLXMobeuvu9Jnq6YhRDwX7P&export=download"
@@ -56,14 +64,15 @@ export default function Home() {
               </Link>
             </div>
             <div className="space-border w-full overflow-hidden lg:w-1/3">
-              <div className="overflow-hidden rounded-3xl">
-                <motion.img
-                  onContextMenu={(e) => e.preventDefault()}
-                  whileHover={{ scale: 1.25 }}
-                  transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
-                  className="aspect-square w-full rounded-lg object-cover lg:max-h-[248px]"
-                  src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg"
+              <div className="relative aspect-square overflow-hidden rounded-3xl">
+                <Image
+                  fill
+                  className="object-cover"
+                  src={profile_pic.src}
                   alt="Mohammad Shahanwaz"
+                  onContextMenu={(e) => e.preventDefault()}
+                  loading="lazy"
+                  sizes="100vw"
                 />
               </div>
             </div>
@@ -73,8 +82,8 @@ export default function Home() {
           <div className="mx-auto w-full max-w-4xl space-y-3 px-4">
             <h3>Skills</h3>
             <p>
-              I have worked with a variety of technologies and tools in my 2+ yr
-              of professional journey. Here are some of them.
+              I have worked with a variety of technologies and tools in the
+              course of my professional journey. Here are some of them.
             </p>
           </div>
           <div className="border-b border-gray-200 bg-pattern py-[98px] dark:border-gray-700 dark:bg-pattern-dark">
@@ -84,9 +93,9 @@ export default function Home() {
         <div className="mx-auto w-full max-w-4xl space-y-16 px-4 py-16">
           <div className="space-y-3 px-4">
             <h3>Mini Gallery</h3>
-            <p className="text-lg">
-              I love to capture moments so here are some of my best shots from
-              my phone camera.
+            <p>
+              I love to capture unique and aesthetic nature photos. Here are
+              some of my best shots from my phone camera.
             </p>
           </div>
           <div className="space-border overflow-hidden">
@@ -95,17 +104,18 @@ export default function Home() {
                 <div
                   key={index}
                   className={cn(
+                    'relative overflow-hidden rounded-lg md:aspect-auto',
                     span,
-                    'overflow-hidden rounded-lg md:aspect-auto',
                   )}
                 >
-                  <motion.img
+                  <Image
+                    fill
+                    className="object-cover"
+                    src={PHOTOS[index].src}
+                    alt="gallery shots"
                     onContextMenu={(e) => e.preventDefault()}
-                    whileHover={{ scale: 1.25 }}
-                    transition={{ duration: 1, ease: [0.5, 0.25, 0, 1] }}
-                    className="aspect-video h-full w-full object-cover"
-                    src={example.src}
-                    alt="Gallery photo"
+                    loading="lazy"
+                    sizes="100vw"
                   />
                 </div>
               ))}

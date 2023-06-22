@@ -15,6 +15,13 @@
   .space-border {
     @apply rounded-[2rem] border border-gray-200 p-2  dark:border-gray-700;
   }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 @layer base {
