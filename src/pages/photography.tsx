@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Meta from '@/components/Meta';
 import Animate from '@/components/Animate';
 import delhi_1 from '@/assets/images/photography/delhi_1.jpg';

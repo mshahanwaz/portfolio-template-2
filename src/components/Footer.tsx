@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import nextjs from '@/assets/vectors/logos/nextjs.svg';
 import tailwind from '@/assets/vectors/logos/tailwind.svg';
 

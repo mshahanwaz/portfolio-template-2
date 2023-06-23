@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import {
   ts,
   redux,
@@ -16,6 +15,7 @@ import {
   vscode,
 } from '@/assets/vectors/logos';
 import cn from '@/core/utils/cn';
+import Image from 'next/image';
 
 const TECHNOLOGIES = [
   {
@@ -87,17 +87,20 @@ export default function Banner() {
         {[...TECHNOLOGIES, ...TECHNOLOGIES].map((tech, index) => (
           <div
             key={index}
-            className="h-inherit inline-flex aspect-square min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50"
+            className="h-inherit inline-flex min-w-[300px] items-center justify-center gap-4 text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50"
             title={tech.name}
           >
-            <img
-              className={cn(
-                'h-inherit inline max-w-none',
-                tech.invert && 'dark:invert',
-              )}
-              src={tech.src}
-              alt={tech.name}
-            />
+            <div className="h-inherit relative aspect-square">
+              <Image
+                className={cn(
+                  'h-inherit inline max-w-none',
+                  tech.invert && 'dark:invert',
+                )}
+                src={tech.src}
+                alt={tech.name}
+                fill
+              />
+            </div>
             <span className="text-lg font-medium">{tech.name}</span>
           </div>
         ))}

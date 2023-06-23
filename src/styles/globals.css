@@ -13,10 +13,10 @@
     height: inherit;
   }
   .space-border {
-    @apply rounded-[2rem] border border-gray-200 p-2  dark:border-gray-700;
+    @apply rounded-[2rem] border border-gray-200 p-2 dark:border-gray-700;
   }
   .no-scrollbar::-webkit-scrollbar {
-    display: none;
+    @apply hidden;
   }
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
