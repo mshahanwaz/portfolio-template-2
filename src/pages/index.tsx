@@ -38,8 +38,8 @@ export default function Home() {
                 fullstack web developer based in Delhi, currently working at{' '}
                 <Link
                   href="https://www.bosscoderacademy.com/"
+                  className="font-medium text-gray-900 hover:text-indigo-600 dark:text-gray-200 dark:hover:text-indigo-400"
                   target="_blank"
-                  className="font-medium text-indigo-600 hover:underline hover:underline-offset-4 dark:text-indigo-400"
                 >
                   Bosscoder Academy
                 </Link>{' '}
@@ -51,7 +51,7 @@ export default function Home() {
                 with my logical skills.
               </p>
               <Link
-                href="https://drive.google.com/uc?id=1b9qWEM1gYSLXMobeuvu9Jnq6YhRDwX7P&export=download"
+                href="https://drive.google.com/uc?id=1fzVJPfUibrSxIqS63to6bn3DRCeOBQ9L&export=download"
                 className="inline-block"
                 target="_blank"
                 rel="noopener noreferrer"

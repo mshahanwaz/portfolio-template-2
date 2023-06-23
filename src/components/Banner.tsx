@@ -92,13 +92,15 @@ export default function Banner() {
           >
             <div className="h-inherit relative aspect-square">
               <Image
+                fill
                 className={cn(
                   'h-inherit inline max-w-none',
                   tech.invert && 'dark:invert',
                 )}
                 src={tech.src}
                 alt={tech.name}
-                fill
+                loading="lazy"
+                sizes="100vw"
               />
             </div>
             <span className="text-lg font-medium">{tech.name}</span>

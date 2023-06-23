@@ -28,7 +28,7 @@
   h1,
   h2,
   h3 {
-    @apply font-bold tracking-tight text-gray-900 dark:text-gray-50;
+    @apply font-bold tracking-tight text-gray-900 dark:text-gray-200;
   }
   h1 {
     @apply text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl;
@@ -37,7 +37,7 @@
     @apply text-3xl;
   }
   p {
-    @apply text-gray-600 dark:text-gray-300;
+    @apply text-gray-600 dark:text-gray-400;
   }
   strong {
     @apply font-medium text-gray-900 dark:text-gray-200;

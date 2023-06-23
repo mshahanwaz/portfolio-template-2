@@ -7,7 +7,7 @@ export default function Custom404() {
       <Meta title="404 - Not Found" />
 
       <div className="flex h-screen">
-        <div className="m-auto text-center text-gray-900 dark:text-gray-50">
+        <div className="m-auto text-center text-gray-900 dark:text-gray-200">
           <h1>404</h1>
           <p>Not Found</p>
         </div>

@@ -79,7 +79,7 @@ export default function Sidebar({ hidden, setHidden }: Props) {
     },
     {
       name: 'Twitter',
-      href: 'https://twitter.com/imshahanwaz',
+      href: 'https://twitter.com/_mshahanwaz',
       icon: <TwitterIcon className="h-4 w-4" />,
       external: true,
     },
@@ -149,10 +149,16 @@ export default function Sidebar({ hidden, setHidden }: Props) {
     }
   }
 
+  // mobile sidebar
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
       handleResize();
       window.addEventListener('resize', handleResize);
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          setIsOpen(false);
+        }
+      });
     }
 
     return () => {
@@ -160,25 +166,12 @@ export default function Sidebar({ hidden, setHidden }: Props) {
         window.removeEventListener('resize', () =>
           setIsMobile(window.innerWidth < 768),
         );
-      }
-    };
-  }, []);
-
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-          setIsOpen(false);
-        }
-      });
-    }
-    return () => {
-      if (typeof window !== 'undefined') {
         window.removeEventListener('keydown', () => {});
       }
     };
   }, []);
 
+  // theme syncing
   React.useEffect(() => {
     if (typeof window !== 'undefined') {
       const localTheme = window.localStorage.getItem('theme');
@@ -236,7 +229,7 @@ export default function Sidebar({ hidden, setHidden }: Props) {
                 className={cn(
                   'flex items-center gap-3 rounded-lg px-3 py-2 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-700 dark:hover:text-gray-50',
                   link.active &&
-                    'bg-gray-200 font-medium text-gray-900 dark:bg-gray-700 dark:text-gray-50',
+                    'bg-gray-200 font-medium text-gray-900 dark:bg-gray-700 dark:text-gray-200',
                 )}
               >
                 <span className="flex h-6 items-center">{link.icon}</span>
@@ -279,7 +272,7 @@ export default function Sidebar({ hidden, setHidden }: Props) {
                     opacity: isOpen ? 1 : 0,
                     transition: { duration: 0.1, ease: 'easeOut' },
                   }}
-                  className="ml-auto text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+                  className="dark:text-gray-2000 ml-auto text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-400"
                 >
                   <span className={cn(!isOpen && 'hidden')}>
                     <ArrowUpRightIcon className="h-4 w-4" />
@@ -309,7 +302,7 @@ export default function Sidebar({ hidden, setHidden }: Props) {
               )}
             >
               <span>Close</span>
-              <span className="text-xs font-semibold leading-4 text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400">
+              <span className="dark:text-gray-2000 text-xs font-semibold leading-4 text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-400">
                 ESC
               </span>
             </motion.div>

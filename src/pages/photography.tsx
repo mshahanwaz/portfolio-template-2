@@ -16,7 +16,6 @@ import rajasthan_5 from '@/assets/images/photography/rajasthan_5.jpg';
 import Image from 'next/image';
 
 const PHOTOS: any = [
-  delhi_1,
   delhi_2,
   goa_1,
   goa_2,
@@ -26,6 +25,7 @@ const PHOTOS: any = [
   goa_6,
   rajasthan_1,
   rajasthan_2,
+  delhi_1,
   rajasthan_3,
   rajasthan_4,
   rajasthan_5,

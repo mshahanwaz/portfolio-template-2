@@ -73,7 +73,7 @@ export default function Timeline() {
                 className="flex flex-col"
                 style={{ width: `${100 - SIZE}%` }}
               >
-                <div className="w-fit -translate-x-1/2 rounded-full border-2 border-gray-200 py-1 px-4 text-center text-sm font-medium text-gray-400 dark:border-gray-700 dark:text-gray-500">
+                <div className="dark:text-gray-2000 w-fit -translate-x-1/2 rounded-full border-2 border-gray-200 py-1 px-4 text-center text-sm font-medium text-gray-400 dark:border-gray-700">
                   2002: Let&apos;s go 🚀
                 </div>
                 <div className="h-20 w-0 -translate-x-1/2 border-l-2 border-dashed border-gray-200 dark:border-gray-700" />
@@ -127,7 +127,7 @@ export default function Timeline() {
                 style={{ width: `${100 - SIZE}%` }}
               >
                 <div className="h-20 w-0 -translate-x-1/2 border-l-2 border-dashed border-gray-200 dark:border-gray-700" />
-                <div className="w-fit -translate-x-1/2 rounded-full border-2 border-gray-200 py-1 px-4 text-sm font-medium text-gray-400 dark:border-gray-700 dark:text-gray-500">
+                <div className="dark:text-gray-2000 w-fit -translate-x-1/2 rounded-full border-2 border-gray-200 py-1 px-4 text-sm font-medium text-gray-400 dark:border-gray-700">
                   More stuffs on the way...
                 </div>
               </div>

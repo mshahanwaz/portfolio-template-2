@@ -34,7 +34,7 @@ export const SelectTheme = ({ theme, isOpen, handleThemeChange }: any) => (
           opacity: isOpen ? 1 : 0,
           transition: { duration: 0.1, ease: 'easeOut' },
         }}
-        className="ml-auto text-gray-400 group-hover:text-gray-500 dark:text-gray-500 dark:group-hover:text-gray-400"
+        className="dark:text-gray-2000 ml-auto text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-400"
       >
         <span className={cn(!isOpen && 'hidden')}>
           <ChevronDownIcon className="h-4 w-4" />
@@ -44,7 +44,7 @@ export const SelectTheme = ({ theme, isOpen, handleThemeChange }: any) => (
     <select
       value={theme}
       onChange={handleThemeChange}
-      className="absolute top-0 left-0 z-10 h-full w-full cursor-pointer text-gray-900 opacity-0 dark:bg-gray-700 dark:text-gray-50"
+      className="absolute top-0 left-0 z-10 h-full w-full cursor-pointer text-gray-900 opacity-0 dark:bg-gray-700 dark:text-gray-200"
     >
       <option value="system">System</option>
       <option value="light">Light</option>

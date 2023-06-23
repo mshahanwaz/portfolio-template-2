@@ -77,7 +77,7 @@ function ProjectCard({ project, index }: any) {
         </div>
       </div>
       <div className="sticky top-4 h-fit space-y-4 rounded-3xl bg-gray-100 p-6 dark:bg-gray-800 lg:w-[600px]">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-50">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-200">
           {project.title}
         </h2>
         <div className="flex flex-wrap gap-2 text-sm font-medium">
