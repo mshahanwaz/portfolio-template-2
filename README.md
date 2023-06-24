@@ -8,7 +8,7 @@ Built with [Next.js](https://nextjs.org/) & [TailwindCSS](https://tailwindcss.co
 
 ## Previews
 
-| ![image](https://github.com/mshahanwaz/portfolio/assets/57594421/53afbeb2-3afd-44aa-b06b-e62d7f37463c) | ![image](https://github.com/mshahanwaz/portfolio/assets/57594421/b1578f27-71f7-4d77-a0c0-df100e86e041) |
+| ![image](https://github.com/mshahanwaz/portfolio/assets/57594421/2d89d40e-d776-4171-ad08-e88944bdf1e7) | ![image](https://github.com/mshahanwaz/portfolio/assets/57594421/0330fc58-0f1a-49c8-9184-39ca4e6cb7ab) |
 |-|-|
 
 ## Run locally
