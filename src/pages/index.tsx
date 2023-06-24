@@ -103,7 +103,7 @@ export default function Home() {
                 <div
                   key={index}
                   className={cn(
-                    'relative overflow-hidden rounded-lg md:aspect-auto',
+                    'relative aspect-square w-full overflow-hidden rounded-lg md:aspect-auto',
                     span,
                   )}
                 >
